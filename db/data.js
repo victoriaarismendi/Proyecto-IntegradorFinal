@@ -1,6 +1,6 @@
 let data = {
     user: "", 
-    produtos: [
+    productos: [
         {"id": 0, "producto": "collar Sofia", "precio": 1500, "material": "oro" },
         {"id": 1, "producto": "pulsera Clara", "precio": 790, "material": "acero" },
         {"id": 2, "producto": "anillo Victoria", "precio": 3450, "material": "diamante" },

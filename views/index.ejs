@@ -5,10 +5,12 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1></h1>
+    <%- include('./partials/header.ejs')
+    <h1>Joyas </h1>
     <% for( let index = 0; index < joyas.length; index++ ) { %>
     <%= joyas[index].material %> 
     <% } %>
-    <p>Welcome to </p>
+
+    <%- include ('./partials/footer.ejs')
   </body>
 </html>
