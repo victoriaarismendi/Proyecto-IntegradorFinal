@@ -5,12 +5,12 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <%- include('./partials/header.ejs')
+    <%- include('./partials/header.ejs') %>
     <h1>Joyas </h1>
     <% for( let index = 0; index < joyas.length; index++ ) { %>
     <%= joyas[index].material %> 
     <% } %>
 
-    <%- include ('./partials/footer.ejs')
+    <%- include ('./partials/footer.ejs') %>
   </body>
 </html>
