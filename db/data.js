@@ -3,33 +3,35 @@ let data = {
     productos: [
         {
             id: 0,
-            producto: "collar Sofia", 
+            producto: "Collar Sofia", 
             precio: 1500, 
-            material: "oro",
-            imagen:"/images/products/collarprimero.jpg" 
+            material: "Oro",
+            imagen:"/images/products/collarprimero.jpg",
+      
         },
 
         {
             id: 1, 
-            producto: "pulsera Clara",
+            producto: "Pulsera Clara",
             precio: 790,
-            material: "acero",
+            material: "Acero",
             imagen:"/images/products/pulserados.jpg" 
+    
         },
 
         {
             id: 2,
-            producto: "anillo Victoria", 
+            producto: "Anillo Victoria", 
             precio: 3450, 
-            material: "diamante", 
+            material: "Diamante", 
             imagen: "/images/products/anillotres.jpg" 
         },
 
         {
             id: 3, 
-            producto: "llavero Antonia", 
+            producto: "Llavero Antonia", 
             precio: 660,
-            material: "oro",
+            material: "Oro",
             imagen: "/images/products/llaverocuatro.jpg"
         },
 
@@ -37,31 +39,31 @@ let data = {
             id: 4, 
             producto: "Aros Ignacia",
             precio: 300,
-            material: "oro",
-            imagen: "/images/products/aritos5.jpg" 
+            material: "Oro",
+            imagen: "/images/products/artitos5.jpg" 
         },
 
         {
             id: 5, 
-            producto: "tobillera Delfina", 
+            producto: "Tobillera Delfina", 
             precio: 850,
-            material: "plata",
+            material: "Plata",
             imagen: "/images/products/collar6.jpg"
         },
 
         {
             id: 6, 
-            producto: "collar Lucia",
+            producto: "Collar Lucia",
             precio: 1300, 
-            material: "acero",
+            material: "Acero",
             imagen: "/images/products/tobillera7.jpg"
         },
 
         {
             id: 7,
-            producto: "aros Lola", 
+            producto: "Aros Lola", 
             precio: 790, 
-            material: "plata",
+            material: "Plata",
             imagen: "/images/products/aros8.jpg" 
         },
 
@@ -69,34 +71,53 @@ let data = {
             id: 8, 
             producto: "Set anillos Martina",
             precio: 570,
-            material: "oro",
+            material: "Oro",
             imagen: "/images/products/anillos9.jpg"
         },
 
         {
             id: 9, 
-            producto: "cinturon Ina", 
+            producto: "Cinturon Ina", 
             precio: 650, 
-            material: "oro",
+            material: "Oro",
             imagen: "/images/products/cinturon10.jpg"
         },
 
         {
             id: 10, 
-            producto: "reloj Tomas",
+            producto: "Reloj Tomas",
             precio: 1700, 
-            material: "bronce",
-            imagen: "/images/products/rejoj11.jpg"
+            material: "Bronce",
+            imagen: "/images/products/reloj11.jpg"
         },
 
         {
             id: 11, 
-            producto: "cadenas Kiara",
+            producto: "Cadenas Kiara",
             precio: 1400,
-            material: "plata",
+            material: "Plata",
             imagen: "/images/products/cadenas12.jpg" }
     ],
-    comentarios: [{}]
+    comentarios: 
+    [
+        {
+            comentario1: "Muy bueno! El material es de increible calidad, se puden usuar en el agua y no se destiñen"
+        },
+        {
+            comentario1: "Me encanta el color"
+        },
+        {
+            comentario1: "Muy bueno! El material es de increible calidad, se puden usuar en el agua y no se destiñen"
+        },
+        {
+            comentario1: "Muy bueno! El material es de increible calidad, se puden usuar en el agua y no se destiñen"
+        },
+        
+
+
+
+    
+    ]
 }
 
 module.exports = data;

@@ -2,7 +2,8 @@ var joyas = require('../db/data')
 
 const controller = {
     index: function(req, res){
-        res.render('index', {joyas: joyas.produtos});
+       res.render('index', {joyas: joyas.productos});
+    
     },
     login: function(req, res){
         res.render('login')
@@ -11,10 +12,10 @@ const controller = {
         res.render('register')
     },
     productAdd: function(req, res){
-        res.render('product-add', {joyas: joyas.produtos})
+        res.render('product-add', {joyas: joyas.productos})
     },
     product: function(req, res){
-        res.render('product', {joyas: joyas.produtos})
+        res.render('product', {joyas: joyas.productos})
     },
     profileEdit: function(req, res){
         res.render('profile-edit')

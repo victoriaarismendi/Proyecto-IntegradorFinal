@@ -4,22 +4,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link width="" rel="shortcut icon" href="./images/logo-mercado-liebre.jpg" />
-	
-	<title> <% XXX Joyas %> </title>
-			<!-- Font Awesome Stylesheet -->
+	<link width="" rel="shortcut icon" href="/images/logo-mercado-liebre.jpg" />
+
+	<title> XXX Joyas </title>
+	<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<!-- Bootstrap Grid Stylesheet -->
-	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="/css/bootstrap-grid.min.css">
 	<!-- Own Stylesheet -->
-	<link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="/css/app.css">
 </head>
+
 <body>
 
 	<!-- Header -->
 	<%- include('./partials/header.ejs') %>
 	<!-- /Header -->
-	
+
 
 	<!-- Banner -->
 	<div class="banner">
@@ -34,16 +35,31 @@
 				<h2 class="products-title">Novedades</h2>
 			</div>
 			<!-- Bucle de products -->
-	
-      <% for( let index = 0; index < joyas.length; index++ ) { %>
-        <%= joyas[index].material %>
-        <% } %>
 
-      
+			<% for( let index = 0; index < joyas.length; index++ ) { %>
+			<div class="col-12 col-sm-6 col-lg-3">
+				<section class="product-box">
+					<a href="/product">
+						<figure class="product-box_image">
+							<img src="<%= joyas[index].imagen %> " alt="cafetera moulinex">
+						</figure>
+						<article class="product-box_data">
+							<h2><%= joyas[index].producto%></h2>
+							<p>Hecho de <%= joyas[index].material %> </p>
+							<p>Precio: $<%= joyas[index].precio %> </p>
+						</article>
+					</a>
+				</section>
+			</div>
 
-<!-- footer -->
-	<%- include('./partials/footer.ejs') %>
-<!-- /footer -->
+			<% } %>
 
-</body>	
+
+
+			<!-- footer -->
+			<%- include('./partials/footer.ejs') %>
+			<!-- /footer -->
+
+</body>
+
 </html>
