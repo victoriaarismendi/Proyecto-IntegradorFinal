@@ -23,7 +23,7 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title"><%= joyas[index].producto %></h2>
+			<h2 class="products-title"><%= joyas.producto %></h2>
 			<p class="product-detail-description">
 				<a href="product-add.html">Editar</a>
 			</p>
@@ -31,12 +31,12 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= joyas[index].imagen %> " alt="" class="product-detail-img">
+					<img src="<%= joyas.imagen %> " alt="" class="product-detail-img">
 					<p class="product-detail-description">
-						Material: <%= joyas[index].material %> 
+						Material: <%= joyas.material %> 
 					</p>
 					<p class="product-detail-description">
-						Precio: $<%= joyas[index].material %> 
+						Precio: $<%= joyas.material %> 
 					</p>
 				</article>
 				<div class="col-12 col-lg-4">
