@@ -96,7 +96,11 @@ let data = {
             producto: "Cadenas Kiara",
             precio: 1400,
             material: "Plata",
-            imagen: "/images/products/cadenas12.jpg" }
+            imagen: "/images/products/cadenas12.jpg" 
+        },
+        {
+            banner: "/public/images/products/unnamed7.jpg"
+        }
     ],
     comentarios: 
     [
