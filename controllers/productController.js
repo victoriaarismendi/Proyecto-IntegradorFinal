@@ -1,15 +1,14 @@
 var joyas = require ('../db/data');
 
-const controller = {
-    search: function (req, res) {
-        res.render ('search-result');
+const productController = {
+    index: function(req,res){
+        return res.render('product',{
+            joyas: joyas.comentarios
+        })
     },
-    product: function (req, res) {
-       res.render ('product') 
-    },
-    add: function (req, res) {
-        res.render ('product-add')
+    add: function(req, res){
+        return res.render('product-add')
     }
 }
 
-module.exports = controller
+module.exports = productController;

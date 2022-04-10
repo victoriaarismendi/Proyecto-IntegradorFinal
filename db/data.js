@@ -1,5 +1,13 @@
 let data = {
-    usarios: {}, 
+    usarios: {
+        usuario: 'Delfina Galarza',
+        email: 'galarzad@gmail.com',
+        contrasenia: 'delfi',
+        fechaDeNacimiento: 23/10/02,
+        documento: 44504495,
+        fotoDePerfil: '',
+        
+    }, 
     productos: [
         {
             id: 0,
@@ -7,7 +15,8 @@ let data = {
             precio: 1500, 
             material: "Oro",
             imagen:"/images/products/collarprimero.jpg",
-      
+            fechaDeCarga: 01/04/33
+
         },
 
         {
@@ -15,8 +24,9 @@ let data = {
             producto: "Pulsera Clara",
             precio: 790,
             material: "Acero",
-            imagen:"/images/products/pulserados.jpg" 
-    
+            imagen:"/images/products/pulserados.jpg",
+            fechaDeCarga: 01/04/33
+
         },
 
         {
@@ -24,7 +34,9 @@ let data = {
             producto: "Anillo Victoria", 
             precio: 3450, 
             material: "Diamante", 
-            imagen: "/images/products/anillotres.jpg" 
+            imagen: "/images/products/anillotres.jpg",
+            fechaDeCarga: 01/04/33
+
         },
 
         {
@@ -32,7 +44,9 @@ let data = {
             producto: "Llavero Antonia", 
             precio: 660,
             material: "Oro",
-            imagen: "/images/products/llaverocuatro.jpg"
+            imagen: "/images/products/llaverocuatro.jpg",
+            fechaDeCarga: 01/04/33
+
         },
 
         {
@@ -40,7 +54,9 @@ let data = {
             producto: "Aros Ignacia",
             precio: 300,
             material: "Oro",
-            imagen: "/images/products/artitos5.jpg" 
+            imagen: "/images/products/artitos5.jpg",
+            fechaDeCarga: 01/04/33
+ 
         },
 
         {
@@ -48,7 +64,7 @@ let data = {
             producto: "Tobillera Delfina", 
             precio: 850,
             material: "Plata",
-            imagen: "/images/products/collar6.jpg"
+            imagen: "/images/products/collar6.jpg",
         },
 
         {
@@ -56,7 +72,9 @@ let data = {
             producto: "Collar Lucia",
             precio: 1300, 
             material: "Acero",
-            imagen: "/images/products/tobillera7.jpg"
+            imagen: "/images/products/tobillera7.jpg",
+            fechaDeCarga: 01/04/33
+
         },
 
         {
@@ -64,7 +82,9 @@ let data = {
             producto: "Aros Lola", 
             precio: 790, 
             material: "Plata",
-            imagen: "/images/products/aros8.jpg" 
+            imagen: "/images/products/aros8.jpg",
+            fechaDeCarga: 01/04/33
+ 
         },
 
         {
@@ -72,7 +92,9 @@ let data = {
             producto: "Set anillos Martina",
             precio: 570,
             material: "Oro",
-            imagen: "/images/products/anillos9.jpg"
+            imagen: "/images/products/anillos9.jpg",
+            fechaDeCarga: 01/04/33
+
         },
 
         {
@@ -80,7 +102,7 @@ let data = {
             producto: "Cinturon Ina", 
             precio: 650, 
             material: "Oro",
-            imagen: "/images/products/cinturon10.jpg"
+            imagen: "/images/products/cinturon10.jpg",
         },
 
         {
@@ -88,7 +110,9 @@ let data = {
             producto: "Reloj Tomas",
             precio: 1700, 
             material: "Bronce",
-            imagen: "/images/products/reloj11.jpg"
+            imagen: "/images/products/reloj11.jpg",
+            fechaDeCarga: 01/04/33
+
         },
 
         {
@@ -96,10 +120,12 @@ let data = {
             producto: "Cadenas Kiara",
             precio: 1400,
             material: "Plata",
-            imagen: "/images/products/cadenas12.jpg" 
+            imagen: "/images/products/cadenas12.jpg",
+            fechaDeCarga: 01/04/33
+
         },
         {
-            banner: "/public/images/products/unnamed7.jpg"
+           banner: "/public/images/products/unnamed7.jpg"
         }
     ],
     comentarios: 
