@@ -1,4 +1,4 @@
-<%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
 <body>
 	<!-- Header -->
@@ -17,72 +17,68 @@
 				<article class="col-12 col-lg-8 product-detail-info">
 					<img src="<%= joyas[0].imagen %> " alt="" class="product-detail-img">
 					<p class="product-detail-description">
-						Material: <%= joyas[0].material %> 
+						Material: <%= joyas[0].material %>
 					</p>
 					<p class="product-detail-description">
-						Precio: $<%= joyas[0].precio %> 
+						Precio: $<%= joyas[0].precio %>
 					</p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
 						<article>
-							<img src="https://via.placeholder.com/35" alt="">
+							<img src="<%= joyas[0].fotoperfil %> " alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit
-									dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa
-									mollitia odit inventore consequuntur.</p>
+									<strong> <a href="profile.html"> <%= joyas[0].user %> </strong>
+									<%= joyas[0].comentario1 %> </p>
 							</div>
 						</article>
 						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur.
-								</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur
-									adipisicing elit.
-								</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet.</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="profile.html">Nombre usuario: </a> </strong>
-									Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur
-									adipisicing elit.
-									Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore</p>
-							</div>
-						</article>
-
-					</section>
-					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
-					<hr>
+							<img src="<%= joyas[1].fotoperfil %>  alt="">
+							<div class=" data">
+							<p class="user">
+								<strong> <a href="profile.html"><%= joyas[1].user %> </a> </strong>
+								<%= joyas[1].comentario2 %>
+							</p>
 				</div>
+				</article>
+				<article>
+					<img src="<%= joyas[2].fotoperfil %> " alt="">
+					<div class="data">
+						<p class="user">
+							<strong> <a href="profile.html"><%= joyas[2].user %> </a> </strong>
+							<%= joyas[2].comentario3 %>
+						</p>
+					</div>
+				</article>
+				<article>
+					<img src="<%= joyas[3].fotoperfil %> " alt="">
+					<div class="data">
+						<p class="user">
+							<strong> <a href="profile.html"><%= joyas[3].user %> </a> </strong>
+							<%= joyas[3].comentario4 %>
+						</p>
+					</div>
+				</article>
+				<article>
+					<img src="<%= joyas[4].fotoperfil %> " alt="">
+					<div class="data">
+						<p class="user">
+							<strong> <a href="profile.html"><%= joyas[4].user %> </a> </strong>
+							<%= joyas[4].comentario5 %>
+						</p>
+					</div>
+				</article>
+
+				</section>
+				<form class="form" action="" method="POST">
+					<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+					<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+				</form>
+				<hr>
 			</div>
 		</div>
+	</div>
 	</div>
 	<!-- /product detail -->
 

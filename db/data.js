@@ -131,17 +131,32 @@ let data = {
     comentarios: 
     [
         {
-            comentario1: "Muy bueno! El material es de increible calidad, se puden usuar en el agua y no se destiñen"
+            usuario: "delfigalarza1",
+            comentario1: "Muy bueno! El material es de increible calidad, se puden usuar en el agua y no se destiñen",
+            fotoperfil: "/public/images/users/delfi.jpg"
         },
         {
-            comentario1: "Me encanta el color"
+            usuario: "vicuharismendi",
+            comentario2: "Me encanta el color",
+            fotoperfil: "/public/images/users/vicu.jpg",
         },
         {
-            comentario1: "Muy bueno! El material es de increible calidad, se puden usuar en el agua y no se destiñen"
+            usuario: "antoniareynal",
+            comentario3: "Lindo y ademas con gran servicio! El verdadero bueno, bonito y barato",
+            fotoperfil: "/public/images/users/antonia.jpg",
+
         },
         {
-            comentario1: "Muy bueno! El material es de increible calidad, se puden usuar en el agua y no se destiñen"
+            usuario: "luisabengolea",
+            comentario4: "Muy recomendado! Me lo ponderaron mucho. Les pase su pagina a todas mis amigas.",
+            fotoperfil: "/public/images/users/cusi.jpg",
+        
         },
+        {
+            usuario: "isablaquier",
+            comentario5: "Que lindo! si lo uso para meterme al agua, resiste el color?",
+            fotoperfil: "/public/images/users/isa.jpg",
+        }
         
 
 
