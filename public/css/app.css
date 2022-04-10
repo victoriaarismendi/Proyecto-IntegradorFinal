@@ -180,6 +180,7 @@ hr {
   overflow: hidden;
   transition: 300ms;
   margin: 20px 0;
+  
 }
 
 .product-box a {
@@ -187,7 +188,11 @@ hr {
 }
 
 .product-box_image {
+ /* width: 100%;
+  height: 260px;
+  object-fit: cover;*/
   border-bottom: 1px solid var(--light-gray);
+  
 }
 
 .product-box_data {
