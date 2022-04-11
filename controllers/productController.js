@@ -8,7 +8,7 @@ const productController = {
         })
     },
     add: function(req, res){
-        return res.render('product-add', {agregarProductos: 'product-add'})
+        return res.render('product-add')
     }
 }
 
