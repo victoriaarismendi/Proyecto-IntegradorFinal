@@ -5,6 +5,7 @@ var indexController = require('../controllers/indexController');
 router.get('/', indexController.index);
 router.get('/login', indexController.login);
 router.get('/register', indexController.register);
+router.get ('/searchResults', indexController.index);
 
 
 module.exports = router;
