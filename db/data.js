@@ -32,7 +32,7 @@ let data = {
             producto: "Anillo Cuarzo", 
             precio: 800,
             material: "Oro",
-            imagen: "/images/products/anilloCuarzo.jpg",
+            imagen: "/images/products/anilloCuarzo.jpeg",
             fechaDeCarga: 01/04/33
 
         },
@@ -114,10 +114,6 @@ let data = {
             imagen: "/images/products/arosRubi.jpg",
             fechaDeCarga: 01/04/33
 
-        },
-
-        {
-           banner: "/public/images/products/unnamed7.jpg"
         }
     ],
     comentarios: 

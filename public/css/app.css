@@ -29,7 +29,7 @@ body {
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
-  background-color: var(--light-gray);
+  background-color: rgb(232, 229, 229);
 }
 
 ul,
@@ -68,7 +68,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: goldenrod;
+  background-color: rgb(213, 186, 76);
 }
 
 .main-header_home-link,
@@ -154,7 +154,7 @@ hr {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(/images/img-home-banner.jpg);
+  background-image: url(/public/images/products/bannerNuevo.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -169,9 +169,11 @@ hr {
 }
 
 .products-title {
-  font-size: 2.4em;
-  font-weight: 400;
-  color: var(--gray);
+  font-size: 30px;
+  font-weight: 800;
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+  
 }
 
 .product-box {
@@ -479,6 +481,18 @@ textarea.form-input {
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
+}
+
+/* index */
+
+.titulo-producto{
+  font-family: 'Josefin Sans', sans-serif;
+  
+}
+.texto-productos{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  
 }
 
 
