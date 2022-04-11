@@ -12,7 +12,7 @@ let data = {
         {
             id: 0, 
             producto: "Anillo Helix",
-            precio: 790,
+            piedras:  "zircón naranja",
             material: "Acero",
             imagen:"/images/products/anilloHelix.jpg",
             fechaDeCarga: 01/04/33
@@ -21,8 +21,8 @@ let data = {
         {
             id: 1,
             producto: "Anillo Onix", 
-            precio: 1100, 
-            material: "Diamante", 
+            piedras: "diamante y lepidolita.", 
+            material: "oro", 
             imagen: "/images/products/anilloOnix.jpg",
             fechaDeCarga: 01/04/33
 
@@ -30,7 +30,7 @@ let data = {
         {
             id: 2, 
             producto: "Anillo Cuarzo", 
-            precio: 800,
+            piedras: "Cuarzo",
             material: "Oro",
             imagen: "/images/products/anilloCuarzo.jpeg",
             fechaDeCarga: 01/04/33
@@ -39,7 +39,7 @@ let data = {
         {
             id: 3, 
             producto: "Collar Jade", 
-            precio: 2500,
+            piedras: "Jade",
             material: "Plata",
             imagen: "/images/products/collarJade.jpg",
         
@@ -47,7 +47,7 @@ let data = {
         {
             id: 4, 
             producto: "Collar Amazonita",
-            precio: 2000, 
+            piedras:"diamante y jade",
             material: "Acero",
             imagen: "/images/products/collarAmazonita.jpg",
             fechaDeCarga: 01/04/33
@@ -56,7 +56,7 @@ let data = {
         {
             id: 5, 
             producto: "Collar Zafiro", 
-            precio: 3000, 
+            piedras: "Zafiro",
             material: "Oro",
             imagen: "/images/products/collarZafiro.jpg",
        
@@ -64,7 +64,7 @@ let data = {
         {
             id: 6,
             producto: "Collar Obsidiana", 
-            precio: 2300, 
+            piedras:"Obsidiana",
             material: "Oro",
             imagen:"/images/products/collarObsidiana.jpg",
             fechaDeCarga: 01/04/33
@@ -73,7 +73,7 @@ let data = {
         {
             id: 7, 
             producto: "Collar Kiara",
-            precio: 2000,
+            piedras:"Perla Blanca",
             material: "Oro",
             imagen: "/images/products/collarKiara.jpg",
             fechaDeCarga: 01/04/33
@@ -82,8 +82,7 @@ let data = {
         {
             id: 8,
             producto: "Aros Reika", 
-            precio: 790, 
-            material: "Plata",
+            piedras:"Zafiro y diamante",
             imagen: "/images/products/arosReika.jpg",
             fechaDeCarga: 01/04/33
  
@@ -91,7 +90,7 @@ let data = {
         {
             id: 9, 
             producto: "Aros Lumini",
-            precio: 1000,
+            piedras: "Dos Obsidianas",
             material: "Oro",
             imagen: "/images/products/arosLumini.jpg",
             fechaDeCarga: 01/04/33
@@ -100,7 +99,7 @@ let data = {
         {
             id: 10, 
             producto: "Aros Howlita",
-            precio: 1000,
+            piedras: "dos obsidianas",
             material: "Oro",
             imagen: "/images/products/arosHowlita.jpg",
             fechaDeCarga: 01/04/33
@@ -109,7 +108,7 @@ let data = {
         {
             id: 11, 
             producto: "Aros Rubi",
-            precio: 900, 
+            piedras: "Rubíes",
             material: "Bronce",
             imagen: "/images/products/arosRubi.jpg",
             fechaDeCarga: 01/04/33
