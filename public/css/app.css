@@ -64,11 +64,16 @@ hr {
   border-bottom: solid 1px var(--light-gray);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: rgb(213, 186, 76);
+  background-color: rgb(203, 196, 201);
 }
 
 .main-header_home-link,
@@ -154,11 +159,19 @@ hr {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(/public/images/products/bannerNuevo.jpeg);
+  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100px;
+  height: 50px;
+  overflow: hidden;
+
+
+}
+
+.banner img{
+  height: 100%;
+
 }
 
 
@@ -315,6 +328,7 @@ hr {
   width: 70%;
   display: block;
   margin: auto;
+  border: black;
 }
 
 .product-detail-info {
@@ -405,6 +419,8 @@ hr {
 }
 .comments {
   padding: 30px 15px 15px 0;
+  text-decoration: none;
+  color: black;
 }
 .comments article{
   margin-bottom: 7.5px;

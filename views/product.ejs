@@ -7,68 +7,36 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title"><%= joyas[0].producto %></h2>
+			<h2 class="products-title"><%= joyas.producto %></h2>
 			<p class="product-detail-description">
-				<a href="/product-add">Editar</a>
+				<a href="/product/id/0"-add">Editar</a>
 			</p>
 		</div>
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= joyas[0].imagen %> " alt="" class="product-detail-img">
+					<img src="<%= joyas.imagen %> " alt="" class="product-detail-img">
 					<p class="product-detail-description">
-						Material: <%= joyas[0].material %>
+						Material: <%= joyas.material %>
 					</p>
 					<p class="product-detail-description">
-						Precio: $<%= joyas[0].precio %>
+						Precio: $<%= joyas.precio %>
 					</p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<article>
-							<img src="<%= joyas[0].fotoperfil %> " alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"> <%= joyas[0].user %> </strong>
-									<%= joyas[0].comentario1 %> </p>
-							</div>
-						</article>
-						<article>
-							<img src="<%= joyas[1].fotoperfil %>  alt="">
-							<div class=" data">
-							<p class="user">
-								<strong> <a href="/profile"><%= joyas[1].user %> </a> </strong>
-								<%= joyas[1].comentario2 %>
-							</p>
-				</div>
-				</article>
-				<article>
-					<img src="<%= joyas[2].fotoperfil %> " alt="">
-					<div class="data">
-						<p class="user">
-							<strong> <a href="/profile"><%= joyas[2].user %> </a> </strong>
-							<%= joyas[2].comentario3 %>
-						</p>
-					</div>
-				</article>
-				<article>
-					<img src="<%= joyas[3].fotoperfil %> " alt="">
-					<div class="data">
-						<p class="user">
-							<strong> <a href="/profile"><%= joyas[3].user %> </a> </strong>
-							<%= joyas[3].comentario4 %>
-						</p>
-					</div>
-				</article>
-				<article>
-					<img src="<%= joyas[4].fotoperfil %> " alt="">
-					<div class="data">
-						<p class="user">
-							<strong> <a href="/profile"><%= joyas[4].user %> </a> </strong>
-							<%= joyas[4].comentario5 %>
-						</p>
-					</div>
-				</article> 
+						<% for( let i = 0; i < comentarios.length; i++ ) { %>
+							<article>
+								<img src="<%= comentarios[i].fotoperfil %> " alt="">
+								<div class="data">
+									<p class="user">
+										<strong> <a href="/profile"> <%= comentarios[i].usuario %> </strong>
+										<%= comentarios[i].comentario %> 
+									</p>
+								</div>
+							</article>
+						<% } %>
+						
 
 				</section>
 				<form class="form" action="" method="POST">

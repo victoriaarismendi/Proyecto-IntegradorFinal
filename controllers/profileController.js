@@ -3,8 +3,8 @@ var joyas = require ('../db/data');
 const profileController = {
     index: function(req, res){
         return res.render('profile',{
-            joyas: joyas.usuario,
-            productos: joyas.producto
+            usuario: joyas.usuarios,
+            
         })
     },
     edit: function(req,res){

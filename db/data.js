@@ -1,11 +1,11 @@
 let data = {
-    usarios: {
+    usuarios: {
         usuario: 'Delfina Galarza',
         email: 'dgalarzagraf@udesa.edu.ar',
         contrasenia: 'delfi',
         fechaDeNacimiento: 23/10/02,
         documento: 44504495,
-        fotoDePerfil: '',
+        fotoDePerfil: '/images/users/delfi.jpg',
         
     }, 
     productos: [
@@ -120,30 +120,30 @@ let data = {
     [
         {
             usuario: "delfigalarza1",
-            comentario1: "Muy bueno! El material es de increible calidad, se puden usuar en el agua y no se destiñen",
-            fotoperfil: "/public/images/users/delfi.jpg"
+            comentario: "Muy bueno! El material es de increible calidad, se puden usuar en el agua y no se destiñen",
+            fotoperfil: "/images/users/delfi.jpg"
         },
         {
             usuario: "vicuharismendi",
-            comentario2: "Me encanta el color",
-            fotoperfil: "/public/images/users/vicu.jpg",
+            comentario: "Me encanta el color",
+            fotoperfil: "/images/users/vicu.jpg",
         },
         {
             usuario: "antoniareynal",
-            comentario3: "Lindo y ademas con gran servicio! El verdadero bueno, bonito y barato",
-            fotoperfil: "/public/images/users/antonia.jpg",
+            comentario: "Lindo y ademas con gran servicio! El verdadero bueno, bonito y barato",
+            fotoperfil: "/images/users/antonia.jpg",
 
         },
         {
             usuario: "luisabengolea",
-            comentario4: "Muy recomendado! Me lo ponderaron mucho. Les pase su pagina a todas mis amigas.",
-            fotoperfil: "/public/images/users/cusi.jpg",
+            comentario: "Muy recomendado! Me lo ponderaron mucho. Les pase su pagina a todas mis amigas.",
+            fotoperfil: "/images/users/cusi.jpg",
         
         },
         {
             usuario: "isablaquier",
-            comentario5: "Que lindo! si lo uso para meterme al agua, resiste el color?",
-            fotoperfil: "/public/images/users/isa.jpg",
+            comentario: "Que lindo! si lo uso para meterme al agua, resiste el color?",
+            fotoperfil: "/images/users/isa.jpg",
         }
         
 
