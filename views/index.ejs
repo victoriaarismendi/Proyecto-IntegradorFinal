@@ -10,7 +10,7 @@
 
 	<!-- Banner -->
 	<div class="banner">
-		<img src="/images/products/bannerNuevo.jpeg" alt="Banner de ofertas">
+		<img src="/images/products/bannerNuevo.jpeg" alt="bannerNuevo">
 	</div>
 	<!-- /Banner -->
 
@@ -18,21 +18,21 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Colección Athenas</h2>
+				<h2 class="products-title">Nuestros Productos</h2>
 			</div>
 			<!-- Bucle de products -->
 
 			<% for( let index = 0; index < joyas.length; index++ ) { %>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product/id/0"">
+					<a href="/product">
 						<figure class="product-box_image">
 							<img src="<%= joyas[index].imagen %> " alt="cafetera moulinex">
 						</figure>
 						<article class="product-box_data">
-							<h2 class="titulo-producto"><%= joyas[index].producto%></h2>
-							<p class="texto-productos">Hecho de <%= joyas[index].material %> </p>
-							<p class="texto-productos">Precio: $<%= joyas[index].precio %> </p>
+							<h2><%= joyas[index].producto%></h2>
+							<p>Hecho de <%= joyas[index].material %> </p>
+							<p>Precio: $<%= joyas[index].precio %> </p>
 						</article>
 					</a>
 				</section>
