@@ -1,7 +1,7 @@
 let data = {
     usarios: {
         usuario: 'Delfina Galarza',
-        email: 'galarzad@gmail.com',
+        email: 'dgalarzagraf@udesa.edu.ar',
         contrasenia: 'delfi',
         fechaDeNacimiento: 23/10/02,
         documento: 44504495,
@@ -10,120 +10,112 @@ let data = {
     }, 
     productos: [
         {
-            id: 0,
-            producto: "Collar Sofia", 
-            precio: 1500, 
-            material: "Oro",
-            imagen:"/images/products/collarprimero.jpg",
-            fechaDeCarga: 01/04/33
-
-        },
-
-        {
-            id: 1, 
-            producto: "Pulsera Clara",
+            id: 0, 
+            producto: "Anillo Helix",
             precio: 790,
             material: "Acero",
-            imagen:"/images/products/pulserados.jpg",
+            imagen:"/images/products/anilloHelix.jpg",
             fechaDeCarga: 01/04/33
 
         },
-
         {
-            id: 2,
-            producto: "Anillo Victoria", 
-            precio: 3450, 
+            id: 1,
+            producto: "Anillo Onix", 
+            precio: 1100, 
             material: "Diamante", 
-            imagen: "/images/products/anillotres.jpg",
+            imagen: "/images/products/anilloOnix.jpg",
             fechaDeCarga: 01/04/33
 
         },
+        {
+            id: 2, 
+            producto: "Anillo Cuarzo", 
+            precio: 800,
+            material: "Oro",
+            imagen: "/images/products/anilloCuarzo.jpg",
+            fechaDeCarga: 01/04/33
 
+        },
         {
             id: 3, 
-            producto: "Llavero Antonia", 
-            precio: 660,
-            material: "Oro",
-            imagen: "/images/products/llaverocuatro.jpg",
-            fechaDeCarga: 01/04/33
-
+            producto: "Collar Jade", 
+            precio: 2500,
+            material: "Plata",
+            imagen: "/images/products/collarJade.jpg",
+        
         },
-
         {
             id: 4, 
-            producto: "Aros Ignacia",
-            precio: 300,
-            material: "Oro",
-            imagen: "/images/products/artitos5.jpg",
+            producto: "Collar Amazonita",
+            precio: 2000, 
+            material: "Acero",
+            imagen: "/images/products/collarAmazonita.jpg",
             fechaDeCarga: 01/04/33
- 
-        },
 
+        },
         {
             id: 5, 
-            producto: "Tobillera Delfina", 
-            precio: 850,
-            material: "Plata",
-            imagen: "/images/products/collar6.jpg",
+            producto: "Collar Zafiro", 
+            precio: 3000, 
+            material: "Oro",
+            imagen: "/images/products/collarZafiro.jpg",
+       
         },
-
         {
-            id: 6, 
-            producto: "Collar Lucia",
-            precio: 1300, 
-            material: "Acero",
-            imagen: "/images/products/tobillera7.jpg",
+            id: 6,
+            producto: "Collar Obsidiana", 
+            precio: 2300, 
+            material: "Oro",
+            imagen:"/images/products/collarObsidiana.jpg",
             fechaDeCarga: 01/04/33
 
         },
-
         {
-            id: 7,
-            producto: "Aros Lola", 
+            id: 7, 
+            producto: "Collar Kiara",
+            precio: 2000,
+            material: "Oro",
+            imagen: "/images/products/collarKiara.jpg",
+            fechaDeCarga: 01/04/33
+
+        },
+        {
+            id: 8,
+            producto: "Aros Reika", 
             precio: 790, 
             material: "Plata",
-            imagen: "/images/products/aros8.jpg",
+            imagen: "/images/products/arosReika.jpg",
             fechaDeCarga: 01/04/33
  
         },
-
-        {
-            id: 8, 
-            producto: "Set anillos Martina",
-            precio: 570,
-            material: "Oro",
-            imagen: "/images/products/anillos9.jpg",
-            fechaDeCarga: 01/04/33
-
-        },
-
         {
             id: 9, 
-            producto: "Cinturon Ina", 
-            precio: 650, 
+            producto: "Aros Lumini",
+            precio: 1000,
             material: "Oro",
-            imagen: "/images/products/cinturon10.jpg",
-        },
+            imagen: "/images/products/arosLumini.jpg",
+            fechaDeCarga: 01/04/33
 
+        },
         {
             id: 10, 
-            producto: "Reloj Tomas",
-            precio: 1700, 
-            material: "Bronce",
-            imagen: "/images/products/reloj11.jpg",
+            producto: "Aros Howlita",
+            precio: 1000,
+            material: "Oro",
+            imagen: "/images/products/arosHowlita.jpg",
             fechaDeCarga: 01/04/33
-
+ 
         },
-
         {
             id: 11, 
-            producto: "Cadenas Kiara",
-            precio: 1400,
-            material: "Plata",
-            imagen: "/images/products/cadenas12.jpg",
+            producto: "Aros Rubi",
+            precio: 900, 
+            material: "Bronce",
+            imagen: "/images/products/arosRubi.jpg",
             fechaDeCarga: 01/04/33
 
         },
+
         {
            banner: "/public/images/products/unnamed7.jpg"
         }
