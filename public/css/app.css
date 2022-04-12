@@ -83,10 +83,11 @@ a {
  
 }
 
-.main-header_credit-link {
+.main-header_credit-link, .fas-fa-hand-holding-usd {
   font-size: 1.5em;
   margin-top: 20px;
   text-align: center;
+  font-family: 'Major Mono Display', monospace;
    
 }
 
@@ -188,7 +189,7 @@ a {
 /*====== Products ======*/
 .products-wrapper {
   z-index: 0;
-  margin-bottom: 80%;
+
 }
 
 .products-title {
@@ -469,6 +470,8 @@ a {
   display: inline-block;
   font-size: 1.6em;
   margin: 10px 0;
+  color: black;
+  font-weight: 20px;
 }
 
 .form-input {
@@ -497,12 +500,13 @@ textarea.form-input {
 .form-login{
   display: flex;
   flex-direction: row;
+  width: 100%;
   
 }
 
-.formulario{
+.formulario, .form-register{
   width: 50%;
-  margin-left: 5%;
+  margin-left: 3%;
   margin-right: 5%;
 }
 
@@ -555,6 +559,20 @@ textarea.form-input {
 
 }
 
+.foto-register{
+  width: 40%;
+  margin-left: 5%;
+  height: 100px;
+
+}
+
+.foto-collares{
+  padding: 10%;
+  
+
+}
+
+
  
 /*====== Profile ======*/
 .info-usuario{
@@ -565,18 +583,26 @@ textarea.form-input {
 
 .foto-perfil{
   border-radius: 50%;
+  margin-top: 5%;
 }
 
 .main-title{
   font-size: 25px;
   margin-bottom: 10px;
+  color: black;
+  margin-top: 3%;
+}
+
+.ul-profile{
+  color: black;
 }
 
 .btn{
-  background-color: #1259c3;
+  background-color: #0b0b0b;
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
+
 }
 
 /* index */

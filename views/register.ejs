@@ -1,4 +1,4 @@
-<%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
 <body>
 	<!-- Header -->
@@ -12,38 +12,46 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<form>
-				<div class="mb-3">
-				  <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-				  <input type="email" class="form-control" id="exampleInputEmail1" >
-				</div>
-				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Nombre de usuario</label>
-					<input type="text" class="form-control" id="exampleInputPassword1">
-				  </div>
-				<div class="mb-3">
-				  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-				  <input type="password" class="form-control" id="exampleInputPassword1">
-				</div>
-				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Fecha de nacimiento</label>
-					<input type="date" class="form-control" id="exampleInputPassword1">
-				  </div>
-				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Nro. de documento</label>
-					<input type="number" class="form-control" id="exampleInputPassword1">
-				</div>
-				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Foto de perfil</label>
-					<input type="file" class="form-control" id="exampleInputPassword1">
-				</div>
-				<button type="submit" class="btn btn-primary">Enviar</button>
-			  </form>
+			<section class="form-login">
+				<article class="form-register">
+				<form>
+					
+						<div class="mb-3">
+							<label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@email.com">
+						</div>
+						<div class="mb-3">
+							<label for="exampleInputPassword1" class="form-label">Nombre de usuario</label>
+							<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Creá tu nombre de usuario">
+						</div>
+						<div class="mb-3">
+							<label for="exampleInputPassword1" class="form-label">Contraseña</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="********">
+						</div>
+						<div class="mb-3">
+							<label for="exampleInputPassword1" class="form-label">Fecha de nacimiento</label>
+							<input type="date" class="form-control" id="exampleInputPassword1">
+						</div>
+						<div class="mb-3">
+							<label for="exampleInputPassword1" class="form-label">Nro. de documento</label>
+							<input type="number" class="form-control" id="exampleInputPassword1" placeholder="99.999.999">
+						</div>
+						<div class="mb-3">
+							<label for="exampleInputPassword1" class="form-label">Foto de perfil</label>
+							<input type="file" class="form-control" id="exampleInputPassword1">
+						</div>
+						<button type="submit" class="btn btn-primary">Enviar</button>
+				</form>
+				</article>
+				<article class="foto-register"> 
+					<img class= "foto-collares" src="/images/fotoregister.jpeg" alt="">
+				</article>
+			</section>
 
 
-<!-- footer -->
-	<%- include('./partials/footer.ejs') %>
-<!-- /footer -->
+			<!-- footer -->
+			<%- include('./partials/footer.ejs') %>
+			<!-- /footer -->
 </body>
 
 </html>
