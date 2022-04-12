@@ -12,7 +12,7 @@ let data = {
         {
             id: 0, 
             producto: "Anillo Helix",
-            piedras:  "zircón naranja",
+            piedras:  "Contiene un zircón naranja",
             material: "Acero",
             imagen:"/images/products/anilloHelix.jpg",
             fechaDeCarga: 01/04/33
@@ -21,7 +21,7 @@ let data = {
         {
             id: 1,
             producto: "Anillo Onix", 
-            piedras: "diamante y lepidolita.", 
+            piedras: "Contiene un diamante y una lepidolita.", 
             material: "oro", 
             imagen: "/images/products/anilloOnix.jpg",
             fechaDeCarga: 01/04/33
@@ -30,7 +30,7 @@ let data = {
         {
             id: 2, 
             producto: "Anillo Cuarzo", 
-            piedras: "Cuarzo",
+            piedras: "Contiene un Cuarzo",
             material: "Oro",
             imagen: "/images/products/anilloCuarzo.jpeg",
             fechaDeCarga: 01/04/33
@@ -39,7 +39,7 @@ let data = {
         {
             id: 3, 
             producto: "Collar Jade", 
-            piedras: "Jade",
+            piedras: "Contiene un Jade",
             material: "Plata",
             imagen: "/images/products/collarJade.jpg",
         
@@ -47,7 +47,7 @@ let data = {
         {
             id: 4, 
             producto: "Collar Amazonita",
-            piedras:"diamante y jade",
+            piedras:"Contiene un diamante y un jade",
             material: "Acero",
             imagen: "/images/products/collarAmazonita.jpg",
             fechaDeCarga: 01/04/33
@@ -56,7 +56,7 @@ let data = {
         {
             id: 5, 
             producto: "Collar Zafiro", 
-            piedras: "Zafiro",
+            piedras: "Contiene un Zafiro",
             material: "Oro",
             imagen: "/images/products/collarZafiro.jpg",
        
@@ -64,7 +64,7 @@ let data = {
         {
             id: 6,
             producto: "Collar Obsidiana", 
-            piedras:"Obsidiana",
+            piedras:"Contiene una Obsidiana",
             material: "Oro",
             imagen:"/images/products/collarObsidiana.jpg",
             fechaDeCarga: 01/04/33
@@ -73,7 +73,7 @@ let data = {
         {
             id: 7, 
             producto: "Collar Kiara",
-            piedras:"Perla Blanca",
+            piedras:"Contiene dos Perlas",
             material: "Oro",
             imagen: "/images/products/collarKiara.jpg",
             fechaDeCarga: 01/04/33
@@ -82,7 +82,7 @@ let data = {
         {
             id: 8,
             producto: "Aros Reika", 
-            piedras:"Zafiro y diamante",
+            piedras:"Contiene un Zafiro y un diamante",
             imagen: "/images/products/arosReika.jpg",
             fechaDeCarga: 01/04/33
  
@@ -90,7 +90,7 @@ let data = {
         {
             id: 9, 
             producto: "Aros Lumini",
-            piedras: "Dos Obsidianas",
+            piedras: "Contiene dos Obsidianas",
             material: "Oro",
             imagen: "/images/products/arosLumini.jpg",
             fechaDeCarga: 01/04/33
@@ -99,7 +99,7 @@ let data = {
         {
             id: 10, 
             producto: "Aros Howlita",
-            piedras: "dos obsidianas",
+            piedras: "Contiene dos obsidianas",
             material: "Oro",
             imagen: "/images/products/arosHowlita.jpg",
             fechaDeCarga: 01/04/33
@@ -108,7 +108,7 @@ let data = {
         {
             id: 11, 
             producto: "Aros Rubi",
-            piedras: "Rubíes",
+            piedras: "Contiene dos rubíes",
             material: "Bronce",
             imagen: "/images/products/arosRubi.jpg",
             fechaDeCarga: 01/04/33

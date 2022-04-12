@@ -1,6 +1,6 @@
-<%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
-<body>
+<body class="body-product-detail">
 	<!-- Header -->
 	<%- include('./partials/header.ejs') %>
 	<!-- /Header -->
@@ -12,23 +12,33 @@
 				<h2 class="products-title">Ingresá a tu cuenta</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-				
-			<form class="form-login">
-				<div class="form-group">
-				  <label class="form-texto-arriba">Ingresá tu email</label>
-				  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresá tu email">
-				  <small id="emailHelp" class="form-texto">Tu información está segura con nosotros.</small>
-				</div>
-				<div class="form-group">
-				  <label class="form-texto-arriba">Ingresá tu contraseña</label>
-				  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="contraseña">
-				</div>
-				<div class="form-check">
-				  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-				  <label class="form-checkbox" for="exampleCheck1">Recordá mi usuario</label>
-				</div>
-				<button type="submit" class="btn-primary">Ingresar</button>
-			  </form>
+
+			<section class="form-login">
+				<article class="formulario">
+					<form>
+						<div class="form-group">
+							<label class="form-texto-arriba">Ingresá tu email</label>
+							<input type="email" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Ingresá tu email">
+							<small id="emailHelp" class="form-texto">Tu información está segura con nosotros.</small>
+						</div>
+						<div class="form-group">
+							<label class="form-texto-arriba">Ingresá tu contraseña</label>
+							<input type="password" class="form-control" id="exampleInputPassword1"
+								placeholder="contraseña">
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-checkbox" for="exampleCheck1">Recordá mi usuario</label>
+						</div>
+						<button type="submit" class="btn-primary">Ingresar</button>
+					</form>
+				</article>
+				<article class="foto-login">
+					<img class="foto-lily" src="/images/products/login-lily.webp" alt="">
+				</article>
+
+			</section>
 
 
 			<!-- footer -->

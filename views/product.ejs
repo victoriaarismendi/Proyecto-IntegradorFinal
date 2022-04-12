@@ -20,7 +20,7 @@
 						Material: <%= joyas.material %>
 					</p>
 					<p class="product-detail-description">
-						Precio: $<%= joyas.precio %>
+						<%= joyas.piedras %>
 					</p>
 				</article>
 				<div class="col-12 col-lg-4">
@@ -30,7 +30,7 @@
 								<img src="<%= comentarios[i].fotoperfil %> " alt="">
 								<div class="data">
 									<p class="user">
-										<strong> <a href="/profile"> <%= comentarios[i].usuario %> </strong>
+										<strong> <a class="a-detail"href="/profile"> <%= comentarios[i].usuario %> </strong>
 										<%= comentarios[i].comentario %> 
 									</p>
 								</div>
