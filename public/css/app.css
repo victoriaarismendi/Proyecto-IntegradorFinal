@@ -84,15 +84,13 @@ a {
 }
 
 .main-header_credit-link, .fas-fa-hand-holding-usd i {
-  font-size: 1.5em;
+  font-size: 2.2em;
   margin-top: 20px;
   text-align: center;
   font-family:'Cinzel Decorative', cursive;
   color: white;
   
 }
-
-
 
 
 .search-form {
@@ -121,7 +119,6 @@ a {
   color: var(--gray);
   cursor: pointer;
 }
-
 
 
 
@@ -221,8 +218,7 @@ a {
  /* width: 100%;
   height: 260px;
   object-fit: cover;*/
-  border-bottom: 1px solid var(--light-gray);
-  
+  border-bottom: 1px solid var(--light-gray);  
 }
 
 .product-box_data {
