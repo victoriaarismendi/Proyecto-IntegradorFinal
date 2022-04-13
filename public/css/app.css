@@ -67,7 +67,7 @@ hr {
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 
@@ -83,13 +83,17 @@ a {
  
 }
 
-.main-header_credit-link, .fas-fa-hand-holding-usd {
+.main-header_credit-link, .fas-fa-hand-holding-usd i {
   font-size: 1.5em;
   margin-top: 20px;
   text-align: center;
-  font-family: 'Major Mono Display', monospace;
-   
+  font-family:'Cinzel Decorative', cursive;
+  color: white;
+  
 }
+
+
+
 
 .search-form {
   position: relative;
@@ -233,6 +237,7 @@ a {
   font-size: 2.4em;
   font-weight: 300;
   margin: 0;
+  text-decoration: none;
 }
 
 .product-box_data span {
@@ -250,6 +255,7 @@ a {
   height: 0;
   transition: 300ms;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .product-box_data i {
@@ -268,6 +274,7 @@ a {
   justify-content: center;
   align-items: center;
   transition: 300ms;
+  text-decoration: none;
 }
 
 .noproducts {
@@ -513,7 +520,7 @@ textarea.form-input {
 
 .form-control{
   height: 50px;
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 3%;
   
 }
@@ -573,6 +580,8 @@ textarea.form-input {
 }
 
 
+
+
  
 /*====== Profile ======*/
 .info-usuario{
@@ -605,6 +614,10 @@ textarea.form-input {
 
 }
 
+.fa-cog:before{
+  color: black;
+}
+
 /* index */
 
 .titulo-producto{
@@ -614,7 +627,10 @@ textarea.form-input {
 .texto-productos{
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
-  
+}
+
+.a-index{
+  text-decoration: none;
 }
 
 
