@@ -67,7 +67,6 @@ hr {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 /*Fondo del body de detalle de producto y de cargar productos */
@@ -205,6 +204,8 @@ a {
   font-weight: 800;
   color: black;
   font-family: 'Josefin Sans', sans-serif;
+  margin-top: 30px;
+  margin-bottom: unset;
   
 }
 
@@ -651,6 +652,58 @@ textarea.form-input {
   text-decoration: none;
 }
 
+/* profile edit formulario */
+
+
+ .form-input{
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  border-radius: 8px;
+  border: none;
+  border: solid 1px var(--gray);
+  padding: 0 15px;
+}
+
+.error{
+  color:rgb(209, 0, 0);
+  font-size: 1.4em;
+}
+
+textarea.form-input{
+  min-height: 140px;
+  resize: vertical;
+  padding: 15px;
+}
+
+.form-register-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-register{
+  border: white solid 0px;
+  margin: 10px;
+  font-size: 19px;
+  border-radius: 22px;
+  padding: 6px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-register-submit{
+  padding: 6px;
+  background: rgb(0, 0, 0);
+  color: white;
+  font: 17px;
+  border-radius: 22px;
+  text-align: center;
+  border:rgb(0, 0, 0);
+  font-family: 'Montserrat', sans-serif;
+
+}
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
