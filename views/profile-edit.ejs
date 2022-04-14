@@ -15,13 +15,32 @@
 			<h2 class="col-12"> 
 			
 			<form method="GET" action="/profile" class ="form-register-container">
-				<input type="email" name="" class="form-register" placeholder="Ingrese su mail">
-				<input type="text" name="" class="form-register" placeholder="Nombre de usuario">
-				<input type="text" name="contraseña" class="form-register" placeholder="Contraseña">
-				<input type="date" name="fecha" class="form-register" placeholder="Fecha">
-				<input type="number" name="DNI" class="form-register" placeholder="Numero de documento">
-				<input type="file" name="foto" class="form-register">
-				<input type="submit" name="" class="form-register-submit">
+				<div class="form-check">
+					<input type="email" name="" class="form-register" placeholder="example@email.com">
+					<label class="form-title" for="exampleCheck1">Ingrese su mail</label>
+				</div>
+				<div class="form-check">
+					<input type="text" name="" class="form-register" placeholder="Nombre de usuario">
+					<label class="form-checkbox" for="exampleCheck1">Nuevo nombre de usuario</label>
+				</div>
+				<div class="form-check">
+					<input type="text" name="contraseña" class="form-register" placeholder="Contraseña">
+					<label class="form-checkbox" for="exampleCheck1">Nueva contraseña</label>
+				</div>
+				<div class="form-check">
+					<input type="date" name="fecha" class="form-register" placeholder="Fecha">
+					<label class="form-checkbox" for="exampleCheck1">Fecha de nacimiento</label>
+				</div>
+				<div class="form-check">
+					<input type="number" name="DNI" class="form-register" placeholder="xx.xxx.xxx">
+					<label class="form-checkbox" for="exampleCheck1">Nro. de DNI</label>
+				</div>
+				<div class="form-check">
+					<input type="file" name="foto" class="form-register">
+					<label class="form-checkbox" for="exampleCheck1">Nueva foto de perfil</label>
+				</div>
+				
+			<input type="submit" name="" class="form-register-submit">
 			</form>
 			</h2>
 
