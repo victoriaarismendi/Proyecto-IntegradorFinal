@@ -12,40 +12,49 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
+			
 			<section class="form-login">
-				<article class="form-register">
-				<form action="/" method="GET" >
-					
-						<div class="mb-3">
-							<label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@email.com">
+				<article class="formulario">
+					<form action="/login" method="GET" >
+						<div class="form-group">
+							<label class="form-texto-arriba">Correo electrónico</label>
+							<input type="email" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="example@email.com">
+		
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">Nombre de usuario</label>
-							<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Creá tu nombre de usuario">
+						<div class="form-group">
+							<label class="form-texto-arriba">Nombre de Usuario</label>
+							<input type="text" class="form-control" id="exampleInputPassword1"
+								placeholder="Creá tu nombre de usuario">
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">Contraseña</label>
-							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="********">
+						<div class="form-group">
+							<label class="form-texto-arriba">Contraseña</label>
+							<input type="text" class="form-control" id="exampleInputPassword1"
+								placeholder="*********">
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">Fecha de nacimiento</label>
-							<input type="date" class="form-control" id="exampleInputPassword1">
+						<div class="form-group">
+							<label class="form-texto-arriba">Fecha de nacimiento</label>
+							<input type="date" class="form-control" id="exampleInputPassword1"
+								placeholder="">
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">Nro. de documento</label>
-							<input type="number" class="form-control" id="exampleInputPassword1" placeholder="99.999.999">
+						<div class="form-group">
+							<label class="form-texto-arriba">Nro. de documento</label>
+							<input type="number" class="form-control" id="exampleInputPassword1"
+								placeholder="99.999.999">
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">Foto de perfil</label>
-							<input type="file" class="form-control" id="exampleInputPassword1">
+						<div class="form-group">
+							<label class="form-texto-arriba">Foto de perfil</label>
+							<input type="file" class="form-control" id="exampleInputPassword1"
+								placeholder="">
 						</div>
-						<button type="submit" class="btn btn-primary">Enviar</button>
-				</form>
+						
+						<button type="submit" class="btn-primary"><a href="/">Crear</a></button>
+					</form>
 				</article>
-				<article class="foto-register"> 
-					<img class= "foto-collares" src="/images/karioregister.jpeg" alt="">
+				<article class="foto-login">
+					<img class="foto-lily" src="/images/karioregister.jpeg" alt="">
 				</article>
+
 			</section>
 
 

@@ -2,7 +2,7 @@
 
 <body class="bodyProducts">
 	<!-- Header -->
-	<%- include('./partials/headerLogueado.ejs') %>
+	<%- include('./partials/header.ejs') %>
 	<!-- /Header -->
 	<!-- product detail -->
 	<div class="container products-wrapper">
@@ -26,27 +26,32 @@
 				<div class="col-12 col-lg-4">
 					<section class="comments">
 						<% for( let i = 0; i < comentarios.length; i++ ) { %>
-							<article>
-								<img src="<%= comentarios[i].fotoperfil %> " alt="">
-								<div class="data">
-									<p class="user">
-										<strong> <a class="a-detail"href="/profile"> <%= comentarios[i].usuario %> </strong>
-										<%= comentarios[i].comentario %> 
-									</p>
-								</div>
-							</article>
-						<% } %>
-						
+						<article>
+							<img src="<%= comentarios[i].fotoperfil %> " alt="">
+							<div class="data">
+								<p class="user">
+									<strong> <a class="a-detail" href="/profile"> <%= comentarios[i].usuario %>
+									</strong><%= comentarios[i].comentario %>
 
-				</section>
-				<form class="form" action="/" method="GET">
-					<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-					<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-				</form>
-				<hr>
+								</p>
+
+
+
+							</div>
+
+						</article>
+						<% } %>
+
+
+					</section>
+					<form class="form" action="/" method="GET">
+						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+					</form>
+					<hr>
+				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 	<!-- /product detail -->
 
