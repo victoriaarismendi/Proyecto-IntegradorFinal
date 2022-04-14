@@ -1,6 +1,6 @@
 let data = {
     usuarios: {
-        usuario: 'Delfina Galarza',
+        usuario: 'delfigalarza1',
         email: 'dgalarzagraf@udesa.edu.ar',
         contrasenia: 'delfi',
         fechaDeNacimiento: 23/10/02,
