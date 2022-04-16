@@ -150,8 +150,11 @@ a {
 .right-navbar {
   font-size: 18px;
   font-family: 'Josefin Sans', sans-serif;
+  text-decoration: underline;
+  text-decoration-color: rgb(156, 155, 155);
   
 }
+
 
 .logout{
   background: transparent;
@@ -159,6 +162,8 @@ a {
   cursor: pointer;
   font-size: 1em;
   color: white;
+  text-decoration: underline;
+  text-decoration-color: rgb(156, 155, 155);
 }
 
 .logout:hover{
@@ -758,22 +763,26 @@ textarea.form-input{
   .left-navbar a,
   .right-navbar a {
     border-bottom: none;
+    text-decoration-color: rgb(156, 155, 155);
 
   }
 
   .left-navbar a:hover,
   .right-navbar a:hover {
     color: white;
-    text-decoration: none;
+    /*text-decoration: none;*/
+    
   }
 
   .left-navbar li {
     margin-right: 15px;
+
   
   }
 
   .right-navbar li {
     margin-left: 15px;
+
   }
 
   .main-footer {
