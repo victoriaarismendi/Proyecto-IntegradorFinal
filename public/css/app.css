@@ -328,7 +328,7 @@ a {
 }
 
 .footer-data i {
-  color: var(--light-blue);
+  color: black;
   font-size: 3.5em;
 }
 
@@ -761,7 +761,7 @@ textarea.form-input{
   .right-navbar a {
     border-bottom: none;
     text-decoration-color: rgb(156, 155, 155);
-
+    font-weight: 400;
   }
 
   .left-navbar a:hover,
