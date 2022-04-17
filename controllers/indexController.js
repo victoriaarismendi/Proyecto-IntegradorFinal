@@ -11,6 +11,9 @@ const indexController = {
     },
     register: function(req, res){
         return res.render('register')
+    },
+    searchResults: function(req, res){
+        res.render('searchResults')
     }
 };
 
