@@ -5,11 +5,13 @@ module.exports = function (sequelize, DataTypes) {
     const cols = {
         id: { autoincrement:true,
             primaryKey: true,
-            type: DataTypes.INTEGER    
+            type: dataTypes.INTEGER    
         },
-    name:{type: DataTypes.STRING},
-    name:{type: DataTypes.STRING},
-    name:{type: DataTypes.STRING},
+        producto:{type: dataTypes.STRING},
+        piedras:{type: dataTypes.STRING},
+        material:{type: dataTypes.STRING},
+        imagen:{type: dataTypes.STRING},
+        fechaDeCarga:{type: dataTypes.INTEGER},
     }
 
     const configs = {
@@ -18,7 +20,7 @@ module.exports = function (sequelize, DataTypes) {
     }
 
 
-    const Joya = sequelize.define('Joya', );
+    const Joya = sequelize.define('Joya', cols, configs );
 
 
     return Joya;
