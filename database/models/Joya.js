@@ -1,6 +1,6 @@
 const sequelize = require ('sequelize');
 
-module.exports = function (sequelize, DataTypes) {
+module.exports = function (sequelize, dataTypes) {
     
     const cols = {
         id: { autoincrement:true,
@@ -11,12 +11,12 @@ module.exports = function (sequelize, DataTypes) {
         piedras:{type: dataTypes.STRING},
         material:{type: dataTypes.STRING},
         imagen:{type: dataTypes.STRING},
-        fechaDeCarga:{type: dataTypes.INTEGER},
+        fechaDeCarga:{type: dataTypes.STRING},
     }
 
     const configs = {
-        tableName: 'Joya',
-        timestampes: false
+        tableName: 'joyas',
+        timestamps: false
     }
 
 

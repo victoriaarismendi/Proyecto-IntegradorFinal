@@ -1,0 +1,11 @@
+<%- include('./partials/header.ejs') %> 
+    <h1><%= joyas.producto %></h1>
+    <ul>
+      <li><b>piedras:</b><%= joyas.piedras %></li>
+      <li><b>material:</b> <%= joyas.material %></li>
+      <li><b>imagen:</b> <%= joyas.imagen %> 
+      <li><b>fecha de carga:</b>$ <%= joyas.fechaDeCarga %></li>
+    </ul>
+    <img src="<%=<joyas class="imagen"></joyas> %>" style="max-width: 200px;" />
+    
+<%- include('./partials/footer.ejs') %>

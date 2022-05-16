@@ -5,7 +5,7 @@ const productController = {
     index: function(req,res){
         db.Joya.findAll()
         .then(function (joyas) {
-            res.render('joyas_index', { joyas });
+            res.render('index', { joyas });
         })
         .catch(function (error) {
             res.send(error)
