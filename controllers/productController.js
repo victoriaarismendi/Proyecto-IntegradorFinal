@@ -5,6 +5,7 @@ const productController = {
     index: function(req,res){
         db.Joya.findAll()
         .then(function (joyas) {
+            console.log(joyas);
             res.render('index', { joyas });
         })
         .catch(function (error) {
@@ -27,6 +28,26 @@ const productController = {
     
     store: function(req, res) {
         db.Joya.create(req.body)
+            .then(function() {
+                res.redirect('/')
+            })
+            .catch(function(error) {
+                res.send(error);
+            })
+    },
+
+    delete: function(req, res) {
+        db.Joya.destroy({ where: {id: req.params.id}})
+            .then(function() {
+                res.redirect('/')
+            })
+            .catch(function(error) {
+                res.send(error);
+            })
+    },
+
+    edit: function(req, res) {
+        db.Joya.findByPk(req.params.id)
             .then(function() {
                 res.redirect('/')
             })

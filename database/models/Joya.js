@@ -11,7 +11,7 @@ module.exports = function (sequelize, dataTypes) {
         piedras:{type: dataTypes.STRING},
         material:{type: dataTypes.STRING},
         imagen:{type: dataTypes.STRING},
-        fechaDeCarga:{type: dataTypes.STRING},
+        fechaDeCarga:{type: dataTypes.DATE},
     }
 
     const configs = {

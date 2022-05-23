@@ -5,8 +5,7 @@ var hasher = require ('bcryptjs');
 
 const indexController = {
     index: function(req, res){
-       return res.render('index',{
-           joyas: joyas.productos,
+        res.redirect('/joyas',{
         })
     },
     login: function(req, res){
