@@ -1,5 +1,6 @@
-var joyas = require ('../db/data');
+//var joyas = require ('../db/data');
 var db = require ('../database/models');
+
 
 const productController = {
     index: function(req,res){
@@ -13,7 +14,7 @@ const productController = {
         });
     },
     add: function(req, res){
-        return res.render('product-add')
+        res.render('product-add')
     },
     show: function(req, res) {
         db.Joya.findByPk(req.params.id)
@@ -27,6 +28,7 @@ const productController = {
     },
     
     store: function(req, res) {
+        req.body.user_id = req.session.user.id;
         db.Joya.create(req.body)
             .then(function() {
                 res.redirect('/')
@@ -38,7 +40,7 @@ const productController = {
 
     delete: function(req, res) {
         db.Joya.destroy({ where: {id: req.params.id}})
-            .then(function() {
+            .then(function(joyas) {
                 res.redirect('/')
             })
             .catch(function(error) {
@@ -49,12 +51,22 @@ const productController = {
     edit: function(req, res) {
         db.Joya.findByPk(req.params.id)
             .then(function() {
+                res.render('joyas-edit', {joyas});
+            })
+            .catch(function(error) {
+                res.send(error);
+            })
+    },
+
+    update: function(req, res) {
+        db.Joya.update(req.body, { where: { id: req.params.id } })
+            .then(function(joyas) {
                 res.redirect('/')
             })
             .catch(function(error) {
                 res.send(error);
             })
-    }
+    },
 }
 
 

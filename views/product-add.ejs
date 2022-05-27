@@ -2,9 +2,7 @@
 
  <body class="fondoProduct-add">
  	<!-- Header -->
- 	<%- include('./partials/headerLogueado.ejs') %>
- 	<!-- /Header -->
-
+	 <%- include('./partials/header.ejs') %> 	<!-- /Header -->
  	<!-- Novedades -->
  	<div class="container products-wrapper">
  		<div class="row">
@@ -35,7 +33,7 @@
  			</form> -->
 			 <section class="form-login">
 				<article class="formulario">
-					<form action="/" method="post"> 
+					<form action="/" method="post" enctype="multipart/form-data"> 
 						<div class="form-group">
 							<label class="form-texto-arriba">Imagen del producto</label>
 							<input type="file" class="form-control" id="exampleInputEmail1"
