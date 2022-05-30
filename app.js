@@ -28,6 +28,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Session middleware
+app.use(function(req, res, next) {
+  res.locals.user = req.session.user;
+  next();
+})
+
 
 //Cookies middleware
 
@@ -43,11 +49,7 @@ app.use(function(req, res, next) {
   }
 })
 
-// Session middleware
-app.use(function(req, res, next) {
-  res.locals.user = req.session.user;
-  next();
-})
+
 
 app.use('/', indexRouter);
 app.use ('/product', productRouter);
