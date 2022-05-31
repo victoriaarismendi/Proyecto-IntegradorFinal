@@ -79,9 +79,14 @@ a {
 }
 
 /*====== Main Header ======*/
+
+
 .main-header {
   padding: 15px 0;
-  background-color: rgb(21, 21, 21);
+  background-color: rgb(0, 0, 0);
+ 
+  
+
 }
 
 .main-header_home-link,
@@ -125,6 +130,12 @@ a {
   border-left: solid 1px var(--light-gray);
   color: var(--gray);
   cursor: pointer;
+}
+
+.div-logo{
+  display: block;
+  width: 10%;
+
 }
 
 
