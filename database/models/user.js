@@ -5,9 +5,12 @@ module.exports = function (sequelize, dataTypes) {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        username: { type: dataTypes.STRING },
-        password: { type: dataTypes.STRING },
-        email: { type: dataTypes.STRING }
+        usuario: { type: dataTypes.STRING },
+        contrasenia: { type: dataTypes.STRING },
+        email: { type: dataTypes.STRING },
+        fechaDeNacimiento: { type: dataTypes.STRING },
+        documento: { type: dataTypes.STRING },
+        fotoDePerfil: { type: dataTypes.STRING }
     }
 
     const configs = {
