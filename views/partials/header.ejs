@@ -34,7 +34,7 @@
 	
 				<div class="col-12 col-md-4">
 					<a class="main-header_credit-link">
-						<i class="fas fa-hand-holding-usd"></i>
+						
 						Kairo Jewelry
 					</a>
 				</div>
@@ -46,28 +46,15 @@
 	
 			<nav class="main-navbar">
 				<ul class="left-navbar">
-        <% if(locals.user){ %> 
-        <li>
-          <a> Hello <%= user.username %></a>
-        </li>
-        <li>
-          <a href="/user.me">Mi perfil</a>
-        </li>
-        <li>
-          <a href="/product/add">Cargar productos</a>
-        </li>
-        <li>
-          <a href="/logout"> Cerrar sesión</a>
-        </li>
 
-        <% } else { %> 
+
         <li>
           <a href="/login"> Ingresá</a>
         </li>
         <li>
           <a href="/register">Creá tu cuenta</a>
         </li>
-        <% } %> 
+        
 
 				<!--	<li><a href="index.html">Todos los productos</a></li>
 					<li><a href="product-add.html">Cargar productos</a></li>
@@ -78,13 +65,7 @@
 							Nombre del usuario <i class="fas fa-user"></i>
 						</a>
 					</li> -->
-					<li> 
-						<form action="" method="post">
-							<button class="logout" type="submit">
-								Cerrar sesión <i class="fas fa-sign-in-alt"></i>
-							</button>
-						</form>
-					</li>
+					
 					<!-- Solo deslogueado <li>
 						<a href="register.html">Creá tu cuenta <i class="far fa-address-card"></i>
 						</a>

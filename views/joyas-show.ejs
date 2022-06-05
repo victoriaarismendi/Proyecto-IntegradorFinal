@@ -6,8 +6,10 @@
       <li><b>imagen:</b> <%= joyas.imagen %> 
       <li><b>fecha de carga:</b>$ <%= joyas.fechaDeCarga %></li>
     </ul>
-    <img src="<%=<joyas%>" class="imagen"></joyas>  style="max-width: 200px;" />
+    <img src="<%=joyas%>" class="imagen"></joyas>  style="max-width: 200px;" />
 
 <form action="joyas/ <%= joyas.id%>/ delete" method ="POST"></form>
  style    <input class="btn btn-danger" type = "button" value = "Borrar">
 <%- include('./partials/footer.ejs') %>
+
+

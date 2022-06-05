@@ -2,8 +2,12 @@
 
 <body class="bodyProducts">
 	<!-- Header -->
+	<% if (locals.user) { %>
+		<%- include('./partials/headerLogueado.ejs') %>
+	<% } else{ %>
 	<%- include('./partials/header.ejs') %>
-		<!-- /Header -->
+	<% } %>
+	<!-- /Header -->
 
 	<!-- Novedades -->
 	<div class="container products-wrapper">

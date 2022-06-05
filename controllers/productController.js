@@ -19,7 +19,7 @@ const productController = {
     show: function(req, res) {
         db.Joya.findByPk(req.params.id)
             .then(function (joyas) {
-                res.render('joyas_show', { joyas });
+                res.render('product', { joyas });
             })
             .catch(function (error) {
                 res.send(error);

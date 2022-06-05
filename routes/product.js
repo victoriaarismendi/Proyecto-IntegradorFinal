@@ -13,7 +13,7 @@ router.get ('/:id/edit', productController.edit);
 router.post('/:id/edit', productController.update);
 router.post('/:id/delete', productController.delete);
 
-router.get('/:id', productController.show);
+router.get('/id/:id', productController.show);
 
 
 

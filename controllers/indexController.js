@@ -12,10 +12,10 @@ const indexController = {
     },
 
     access: function(req, res, next) {
-        db.User.findOne({ where: {username: req.body.username}})
+        db.User.findOne({ where: {email: req.body.username}})
         .then(function(user) {
         if (!user) throw Error ('User not found.')
-        if (hasher.compareSync(req.body.password, user.password)) {
+        if (hasher.compareSync(req.body.password, user.contraseña)) {
             req.session.user = user;
             if (req.body.rememberme){
                 res.cookie('userId', user.id, {maxAge: 1000 * 60 * 60 * 24 * 7})
@@ -41,11 +41,12 @@ const indexController = {
 
     store: function(req, res) {
         if (!req.body.email) { throw Error('Not email provided.') }
-        const hashedPassword = hasher.hashSync(req.body.password, 10); 
+        const hashedPassword = hasher.hashSync(req.body.contraseña, 10); 
         db.User.create({
-                username: req.body.username,
-                password: hashedPassword,
+                nombre: req.body.nombre,
+                contraseña: hashedPassword,
                 email: req.body.email,
+                fechaDeNacimiento: req.body.fechaDeNacimiento
             })
             .then(function () {
                 res.redirect('/');

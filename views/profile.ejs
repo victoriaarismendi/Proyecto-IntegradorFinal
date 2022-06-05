@@ -2,8 +2,12 @@
 
 <body>
 	<!-- Header -->
+	<% if (locals.user) { %>
+		<%- include('./partials/headerLogueado.ejs') %>
+	<% } else{ %>
 	<%- include('./partials/header.ejs') %>
-		<!-- /Header -->
+	<% } %>
+	<!-- /Header -->
 
 	<!-- Datos del usuario -->
 	<section class="info-usuario container products-wrapper">

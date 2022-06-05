@@ -2,7 +2,11 @@
 
 <body class="body-product-detail">
 	<!-- Header -->
+	<% if (locals.user) { %>
+		<%- include('./partials/headerLogueado.ejs') %>
+	<% } else{ %>
 	<%- include('./partials/header.ejs') %>
+	<% } %>
 	<!-- /Header -->
 
 	<!-- Novedades -->
@@ -15,7 +19,7 @@
 
 			<section class="form-login">
 				<article class="formulario">
-					<form method="POST" >
+					<form method="POST" action="/login" >
 						<div class="form-group">
 							<label class="form-texto-arriba">Ingresá tu email</label>
 							<input type="text" class="form-control" id="username" name="username"
@@ -31,7 +35,7 @@
 							<input type="checkbox" class="form-check-input" id="rememberme" name="rememberme">
 							<label class="form-check-label" for="rememberme">Recordá mi usuario</label>
 						</div>
-						<button type="submit" class="btn btn-primary"><a href="/">Ingresar</a></button>
+						<button type="submit" class="btn btn-primary">Ingresar</button>
 					</form>
 
 				</article>
