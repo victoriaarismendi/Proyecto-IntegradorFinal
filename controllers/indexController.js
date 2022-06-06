@@ -39,7 +39,7 @@ const indexController = {
         return res.render('register')
     },
 
-    store: function(req, res) {
+    store: async function(req, res) {
        try { 
         if (!req.body.email) { throw Error('Not email provided.')}
         if (!req.body.username) { throw Error('Not username provided.')}
