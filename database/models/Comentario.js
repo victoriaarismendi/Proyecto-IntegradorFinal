@@ -20,22 +20,19 @@ module.exports = function (sequelize, dataTypes) {
     }
 
 
-    const Joya = sequelize.define('Comentarios', cols, configs );
+    const Comentarios = sequelize.define('Comentarios', cols, configs );
 
     Comentarios.associate = function(models) {
-        Comentarios.belongTo(models.User, {
+        Comentarios.belongsTo(models.User, {
             as: 'autor',
             foreignKey: 'usuario_id'
-        })
-    };
-
-    Comentarios.associate = function(models) {
-        Comentarios.belongTo(models.Joya, {
-            as: 'autor',
+        });
+        Comentarios.belongsTo(models.Joya, {
+            as: 'joya',
             foreignKey: 'producto_id'
         })
-    };
+    }  
 
 
-    return Joya;
+    return Comentarios;
 }
