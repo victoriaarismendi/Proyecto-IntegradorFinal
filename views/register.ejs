@@ -10,6 +10,12 @@
 			<div class="col-12">
 				<h2 class="products-title">Registrate</h2>
 			</div>
+			<% if (locals.error) { %>
+				<div class="alert alert-danger" role="alert">
+					<%=error %>
+				</div>
+
+			<% } %>
 			
 			<section class="form-login">
 				<article class="formulario">

@@ -8,6 +8,7 @@
 	<%- include('./partials/header.ejs') %>
 	<% } %>
 	<!-- /Header -->
+
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">		
@@ -25,41 +26,21 @@
 						Material: <%= joyas.material %>
 					</p>
 					<p class="product-detail-description">
-						<%= joyas.piedras %>
+						Piedras: <%= joyas.piedras %>
+					</p>
+					<p class="product-detail-description">
+						Fecha de carga: <%= joyas.fechaDeCarga %>
 					</p>
 				</article>
-				<div class="col-12 col-lg-4">
-					<section class="comments">
-						<% for( let i = 0; i < comentarios.length; i++ ) { %>
-						<article>
-							<img src="<%= comentarios[i].fotoperfil %> " alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a class="a-detail" href="/profile"> <%= comentarios[i].usuario %></a>
-									</strong><%= comentarios[i].comentario %>
-
-								</p>
-
-
-
-							</div>
-
-						</article>
-						<% } %>
-
-
-					</section>
-					<form class="form" action="/" method="GET">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
-					<hr>
-				</div>
+				
 			</div>
+			<form action="joyas/ <%= joyas.id%>/ delete" method ="POST"></form>
+			<input class="btn btn-danger" type = "button" value = "Borrar">
+		
 		</div>
 	</div>
 	<!-- /product detail -->
-
+	
 
 	<!-- footer -->
 	<%- include('./partials/footer.ejs') %>

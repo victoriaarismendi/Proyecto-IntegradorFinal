@@ -46,9 +46,7 @@ const indexController = {
         if (req.body.password.length <4) { throw Error('Password too short.')}
         const user = await  db.User.findOne({where: {email: req.body.email}})
             if (user) {throw Error ('Email already in use')}
-        }
-
-        catch (error) {
+        } catch (error) {
             res.render('register', {error: error.message});
             return;
         }

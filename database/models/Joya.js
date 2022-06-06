@@ -22,6 +22,6 @@ module.exports = function (sequelize, dataTypes) {
 
     const Joya = sequelize.define('Joya', cols, configs );
 
-
+   
     return Joya;
 }
