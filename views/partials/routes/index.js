@@ -9,6 +9,9 @@ router.post ('/login', indexController.access);
 router.get('/register', indexController.register);
 router.post ('/register', indexController.store);
 router.get ('/searchResults', indexController.index);
+router.get ('/search', indexController.search);
+
+
 
 
 module.exports = router;

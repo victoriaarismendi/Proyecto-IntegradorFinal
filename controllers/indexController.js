@@ -1,5 +1,6 @@
 //var joyas = require('../db/data');
 var db = require ('../database/models');
+var op = db.Sequelize.Op;
 var hasher = require ('bcryptjs');
 
 
@@ -10,6 +11,22 @@ const indexController = {
     login: function(req, res){
         return res.render('login', {title: 'login'});
     },
+
+
+    search: function (req, res){
+        db.Joya.findAll({
+            where: [
+                {title: { [op.like]: "%"+req.query.criteria+"%"}}
+            ],
+        }) .then (function (joyas){
+            res.render('index', {joyas});
+        })
+        .catch(function (error){
+            res.send(error)
+        });       
+    },
+
+
 
     access: function(req, res, next) {
         db.User.findOne({ where: {email: req.body.username}})
