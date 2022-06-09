@@ -21,7 +21,15 @@ module.exports = function (sequelize, dataTypes) {
 
 
     const Joya = sequelize.define('Joya', cols, configs );
-
-   
+    Joya.associate = function(models) {
+        Joya.belongsTo(models.user, {
+            as: 'usuario',
+            foreignKey: 'usuario_id'
+        })
+        Joya.hasMany(models.Comentario, {
+            as: 'comentario',
+            foreignKey: 'producto_id'
+        })
+    }
     return Joya;
 }

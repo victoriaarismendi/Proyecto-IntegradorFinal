@@ -17,7 +17,14 @@ module.exports = function (sequelize, dataTypes) {
         timestamps: false
     }
 
-    const Joya = sequelize.define('User', cols, configs);
+    const Joya = sequelize.define('user', cols, configs);
+
+    user.associate = function(models) {
+        user.hasMany(models.Joya, {
+            as: 'joya',
+            foreignKey: 'usuario_id'
+        })
+    }
 
     return Joya;
 }
