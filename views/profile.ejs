@@ -17,11 +17,14 @@
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= usuario.usuario %>
-						<a href="/profile/edit">
+					<h1 class="main-title"><%= usuario.nombre %>
+					</h1>
+					<% if (locals.user && user.id == usuario.id) { %>
+						<a href="/profile/edit/<%= usuario.id %> ">
 							<i class="fas fa-cog"></i>
 						</a>
-					</h1>
+					<% } %> 
+						
 					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
 				</div>
 				<div>

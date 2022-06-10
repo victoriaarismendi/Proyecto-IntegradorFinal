@@ -17,7 +17,7 @@ module.exports = function (sequelize, dataTypes) {
         timestamps: false
     }
 
-    const Joya = sequelize.define('user', cols, configs);
+    const user = sequelize.define('user', cols, configs);
 
     user.associate = function(models) {
         user.hasMany(models.Joya, {
@@ -26,5 +26,5 @@ module.exports = function (sequelize, dataTypes) {
         })
     }
 
-    return Joya;
+    return user;
 }

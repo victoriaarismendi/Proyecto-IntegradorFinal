@@ -1,9 +1,9 @@
-<%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
 <body class="bodyProducts">
 	<!-- Header -->
 	<% if (locals.user) { %>
-		<%- include('./partials/headerLogueado.ejs') %>
+	<%- include('./partials/headerLogueado.ejs') %>
 	<% } else{ %>
 	<%- include('./partials/header.ejs') %>
 	<% } %>
@@ -15,57 +15,53 @@
 			<div class="col-12">
 				<h2 class="products-title">Editar mi perfil</h2>
 			</div>
-			
+
 			<section class="form-login">
 				<article class="formulario">
-					<form action="" method="GET" >
+					<form action="/register" method="POST">
 						<div class="form-group">
-							<label class="form-texto-arriba">Nuevo correo electrónico</label>
-							<input type="email" class="form-control" id="exampleInputEmail1"
-								aria-describedby="emailHelp" placeholder="Example@email.com">
-		
+							<label class="form-texto-arriba">Correo electrónico</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" name="email"
+								aria-describedby="emailHelp" placeholder="example@email.com">
+
 						</div>
 						<div class="form-group">
-							<label class="form-texto-arriba">Nuevo nombre de Usuario</label>
-							<input type="text" class="form-control" id="exampleInputPassword1"
+							<label class="form-texto-arriba">Nombre de Usuario</label>
+							<input type="text" class="form-control" id="exampleInputPassword1" name="nombre"
 								placeholder="Creá tu nombre de usuario">
 						</div>
 						<div class="form-group">
-							<label class="form-texto-arriba">Cambiá tu contraseña</label>
-							<input type="text" class="form-control" id="exampleInputPassword1"
+							<label class="form-texto-arriba">Contraseña</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" name="contraseña"
 								placeholder="*********">
 						</div>
 						<div class="form-group">
 							<label class="form-texto-arriba">Fecha de nacimiento</label>
-							<input type="date" class="form-control" id="exampleInputPassword1"
+							<input type="date" class="form-control" id="exampleInputPassword1" name="fechaDeNacimiento"
 								placeholder="">
 						</div>
 						<div class="form-group">
-							<label class="form-texto-arriba">Nro. de documento</label>
-							<input type="number" class="form-control" id="exampleInputPassword1"
-								placeholder="99.999.999">
-						</div>
-						<div class="form-group">
-							<label class="form-texto-arriba">Cambiá tu foto de perfil</label>
-							<input type="file" class="form-control" id="exampleInputPassword1"
+							<label class="form-texto-arriba">Foto de perfil</label>
+							<input type="file" class="form-control" id="exampleInputPassword1" name="fotoDePerfil"
 								placeholder="">
 						</div>
-						
-						<button type="submit" class="btn-primary"><a href="/profile">Editar</a></button>
+
+						<button type="submit" class="btn-primary">Crear</button>
 					</form>
 				</article>
 				<article class="foto-login">
-					<img class="foto-lily" src="" alt="">
+					<img class="foto-lily" src="/images/karioregister.jpeg" alt="">
 				</article>
 
 			</section>
 
-			
+		</div>
+	</div>
 
 
-<!-- footer -->
-<%- include('./partials/footer.ejs') %>
-<!-- /footer -->
+	<!-- footer -->
+	<%- include('./partials/footer.ejs') %>
+	<!-- /footer -->
 
 </body>
 

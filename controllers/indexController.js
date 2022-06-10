@@ -9,6 +9,9 @@ const indexController = {
         res.redirect('/product')
     },
     login: function(req, res){
+        if(req.session.user){
+            res.redirect('/')
+        }
         return res.render('login', {title: 'login'});
     },
 
@@ -29,7 +32,7 @@ const indexController = {
 
 
     access: function(req, res, next) {
-        db.User.findOne({ where: {email: req.body.username}})
+        db.user.findOne({ where: {email: req.body.username}})
         .then(function(user) {
         if (!user) throw Error ('User not found.')
         if (hasher.compareSync(req.body.password, user.contraseña)) {
@@ -53,6 +56,9 @@ const indexController = {
         res.redirect ('/')
     },
     register: function(req, res){
+        if(req.session.user){
+            res.redirect('/')
+        }
         return res.render('register')
     },
 
