@@ -4,7 +4,13 @@ var db = require ('../database/models');
 
 const productController = {
     index: function(req,res){
-        db.Joya.findAll() //aca le digo al modelo que me traiga todo lo que encuentre
+        db.Joya.findAll({
+            include: {all: true, nested: false },
+            order: [ ['id', 'DESC' ]],
+          
+
+        }
+        ) //aca le digo al modelo que me traiga todo lo que encuentre
         .then(function (joyas) { //cuando pase lo de arriba, que me traiga lo que encontro y me muestre la vista de index
             console.log(joyas);
             res.render('index', { joyas });
@@ -70,20 +76,21 @@ const productController = {
     },
     comment: function(req, res) {
         if (!req.session.user) { 
-            throw Error('Not authorized.')
+            throw Error('Iniciá sesión o registrate para comentar')
         }
         // Set user from session user
         req.body.usuario_id = req.session.user.id;
         // Set book from url params
-        req.body.book_id = req.params.id;
+        req.body.producto_id = req.params.id;
         db.Comentario.create(req.body)
             .then(function() {
-                res.redirect('/product' + req.params.id)
+                res.redirect('/product/id/' + req.params.id)
             })
             .catch(function(error) {
                 res.send(error);
             })
     },
+
 }
 
 

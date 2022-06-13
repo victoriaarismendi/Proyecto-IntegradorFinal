@@ -31,7 +31,7 @@
 					<p class="product-detail-description">
 						Fecha de carga: <%= joyas.fechaDeCarga %>
 					</p>
-					<form action="joyas/ <%= joyas.id%>/ delete" method="POST"></form>
+					<form action="joyas/<%= joyas.id%>/delete" method="POST"></form>
 					<input class="btn btn-danger" type="button" value="Borrar">
 				</article>
 				<div class="col-12 col-lg-4">
@@ -47,7 +47,10 @@
 					
 					<%}%>
 
-
+					<form class="form" action="/product/<%= joyas.id %>/comment" method="POST">
+						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+						<button type="submit" class="buy-now-button" name="comentario" id="comentario">AGREGAR COMENTARIO</button>
+					</form>
 				</div>
 			</div>
 
