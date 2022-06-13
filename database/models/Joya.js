@@ -12,6 +12,7 @@ module.exports = function (sequelize, dataTypes) {
         material:{type: dataTypes.STRING},
         imagen:{type: dataTypes.STRING},
         fechaDeCarga:{type: dataTypes.DATE},
+        //usuario_id:{type: dataTypes.STRING}
     }
 
     const configs = {
@@ -22,11 +23,11 @@ module.exports = function (sequelize, dataTypes) {
 
     const Joya = sequelize.define('Joya', cols, configs );
     Joya.associate = function(models) {
-        Joya.belongsTo(models.user, {
+       /* Joya.belongsTo(models.user, {
             as: 'usuario',
             foreignKey: 'usuario_id'
-        })
-        Joya.hasMany(models.Comentarios, {
+        }) */
+        Joya.hasMany(models.Comentario, {
             as: 'comentario',
             foreignKey: 'producto_id'
         })
