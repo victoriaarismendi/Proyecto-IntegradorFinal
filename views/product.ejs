@@ -31,12 +31,10 @@
 					<p class="product-detail-description">
 						Fecha de carga: <%= joyas.fechaDeCarga %>
 					</p>
+					<form action="joyas/ <%= joyas.id%>/ delete" method="POST"></form>
+					<input class="btn btn-danger" type="button" value="Borrar">
 				</article>
-
-			</div>
-			<form action="joyas/ <%= joyas.id%>/ delete" method="POST"></form>
-			<input class="btn btn-danger" type="button" value="Borrar">
-			<div class="col-12 col-lg-4">
+				<div class="col-12 col-lg-4">
 				<h2>comentarios</h2>
 					<% for( let i = 0; i < joyas.comentarios.length; i++) { %> 
 					<div class="card mb-2">
@@ -50,6 +48,7 @@
 					<%}%>
 
 
+				</div>
 			</div>
 
 

@@ -17,7 +17,7 @@ const productController = {
         res.render('product-add')
     },
     show: function(req, res) {
-        db.Joya.findByPk(req.params.id, { include: {all: true}})
+        db.Joya.findByPk(req.params.id, { include: {all: true, nested: true}})
             .then(function (joyas) {
                 res.render('product', { joyas });
             })
