@@ -19,10 +19,11 @@ const indexController = {
     search: function (req, res){
         db.Joya.findAll({
             where:{[op.or]: [
-                {producto: { [op.like]: "%"+req.query.criteria+"%"}},
-                {material: { [op.like]: "%"+req.query.criteria+"%"}}
+                {producto: { [op.like]: "%"+req.query.search+"%"}},
+                {material: { [op.like]: "%"+req.query.search+"%"}}
             ]
         },
+        include: [{association: 'usuario'}]
         }) .then (function (joyas){
             res.render('index', {joyas});
         })
@@ -35,7 +36,7 @@ const indexController = {
 
 
     access: function(req, res, next) {
-        db.user.findOne({ where: {email: req.body.username}})
+        db.User.findOne({ where: {email: req.body.username}})
         .then(function(user) {
         if (!user) throw Error ('User not found.')
         if (hasher.compareSync(req.body.password, user.contraseña)) {

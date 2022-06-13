@@ -3,7 +3,7 @@ var joyas = require ('../db/data');
 
 const profileController = {
     index: function(req, res){
-        db.user.findByPk(req.session.user.id, {include: [{association: 'joyas'}]})
+        db.User.findByPk(req.session.user.id, {includes: [{association: 'joya'}]})
         .then(usuario=>{
             return res.render('profile',{
                 usuario: usuario

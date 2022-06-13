@@ -17,14 +17,14 @@ module.exports = function (sequelize, dataTypes) {
         timestamps: false
     }
 
-    const user = sequelize.define('user', cols, configs);
+    const User = sequelize.define('User', cols, configs);
 
-    user.associate = function(models) {
-        user.hasMany(models.Comentario, {
+    User.associate = function(models) {
+        User.hasMany(models.Comentario, {
             as: 'user',
             foreignKey: 'usuario_id'
         });
-        user.hasMany(models.Joya, {
+        User.hasMany(models.Joya, {
             as: 'usuario',
             foreignKey: 'usuario_id'
         });
@@ -33,5 +33,5 @@ module.exports = function (sequelize, dataTypes) {
         
     }
 
-    return user;
+    return User;
 }

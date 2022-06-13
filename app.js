@@ -28,18 +28,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Session middleware
-app.use(function(req, res, next) {
-  res.locals.user = req.session.user;
-  next();
-})
-
 
 //Cookies middleware
 
 app.use(function(req, res, next) {
   if (!req.session.user) {
-      db.user.findByPk (req.cookies.userId)
+      db.User.findByPk (req.cookies.userId)
       .then (function(user) {
       req.session.user = user;
       next ();
@@ -49,6 +43,12 @@ app.use(function(req, res, next) {
   }
 })
 
+
+// Session middleware
+app.use(function(req, res, next) {
+  res.locals.user = req.session.user;
+  next();
+})
 
 
 app.use('/', indexRouter);
