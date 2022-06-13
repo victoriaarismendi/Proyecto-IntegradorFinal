@@ -19,12 +19,19 @@ module.exports = function (sequelize, dataTypes) {
 
     const user = sequelize.define('user', cols, configs);
 
-    /*user.associate = function(models) {
-        user.hasMany(models.Joya, {
-            as: 'joya',
+    user.associate = function(models) {
+        user.hasMany(models.Comentario, {
+            as: 'user',
             foreignKey: 'usuario_id'
-        })
-    }*/
+        });
+        user.hasMany(models.Joya, {
+            as: 'usuario',
+            foreignKey: 'usuario_id'
+        });
+       
+       
+        
+    }
 
     return user;
 }

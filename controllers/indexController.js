@@ -18,9 +18,11 @@ const indexController = {
 
     search: function (req, res){
         db.Joya.findAll({
-            where: [
-                {title: { [op.like]: "%"+req.query.criteria+"%"}}
-            ],
+            where:{[op.or]: [
+                {producto: { [op.like]: "%"+req.query.criteria+"%"}},
+                {material: { [op.like]: "%"+req.query.criteria+"%"}}
+            ]
+        },
         }) .then (function (joyas){
             res.render('index', {joyas});
         })
@@ -28,6 +30,7 @@ const indexController = {
             res.send(error)
         });       
     },
+  
 
 
 
