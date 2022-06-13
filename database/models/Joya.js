@@ -28,7 +28,7 @@ module.exports = function (sequelize, dataTypes) {
             foreignKey: 'usuario_id'
         });
         Joya.hasMany(models.Comentario, {
-            as: 'joya',
+            as: 'comentarios',
             foreignKey: 'producto_id'
         })
     }

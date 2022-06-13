@@ -3,7 +3,7 @@
 <body class="bodyProducts">
 	<!-- Header -->
 	<% if (locals.user) { %>
-		<%- include('./partials/headerLogueado.ejs') %>
+	<%- include('./partials/headerLogueado.ejs') %>
 	<% } else{ %>
 	<%- include('./partials/header.ejs') %>
 	<% } %>
@@ -11,7 +11,7 @@
 
 	<!-- product detail -->
 	<div class="container products-wrapper">
-		<div class="d-flex align-items-center">		
+		<div class="d-flex align-items-center">
 
 			<h2 class="products-title"><%= joyas.producto %></h2>
 			<p class="product-detail-description">
@@ -32,19 +32,35 @@
 						Fecha de carga: <%= joyas.fechaDeCarga %>
 					</p>
 				</article>
-				
-			</div>
-			<form action="joyas/ <%= joyas.id%>/ delete" method ="POST"></form>
-			<input class="btn btn-danger" type = "button" value = "Borrar">
-		
-		</div>
-	</div>
-	<!-- /product detail -->
-	
 
-	<!-- footer -->
-	<%- include('./partials/footer.ejs') %>
-	<!-- /footer -->
+			</div>
+			<form action="joyas/ <%= joyas.id%>/ delete" method="POST"></form>
+			<input class="btn btn-danger" type="button" value="Borrar">
+			<div class="col-12 col-lg-4">
+				<h2>comentarios</h2>
+					<% for( let i = 0; i < joyas.comentarios.length; i++) { %> 
+					<div class="card mb-2">
+						<div class="card-body">
+							<b><%= joyas.comentarios[i].user.nombre %> </b></br>
+							<%= joyas.comentarios[i].comentario %> 
+						</div>
+					</div> 
+					
+					
+					<%}%>
+
+
+			</div>
+
+
+		</div>
+
+		<!-- /product detail -->
+
+
+		<!-- footer -->
+		<%- include('./partials/footer.ejs') %>
+		<!-- /footer -->
 
 </body>
 

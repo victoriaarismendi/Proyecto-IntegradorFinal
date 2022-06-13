@@ -17,7 +17,7 @@ const productController = {
         res.render('product-add')
     },
     show: function(req, res) {
-        db.Joya.findByPk(req.params.id)
+        db.Joya.findByPk(req.params.id, { include: {all: true}})
             .then(function (joyas) {
                 res.render('product', { joyas });
             })
@@ -63,6 +63,22 @@ const productController = {
         db.Joya.update(req.body, { where: { id: req.params.id } })
             .then(function(joyas) {
                 res.redirect('/')
+            })
+            .catch(function(error) {
+                res.send(error);
+            })
+    },
+    comment: function(req, res) {
+        if (!req.session.user) { 
+            throw Error('Not authorized.')
+        }
+        // Set user from session user
+        req.body.usuario_id = req.session.user.id;
+        // Set book from url params
+        req.body.book_id = req.params.id;
+        db.Comentario.create(req.body)
+            .then(function() {
+                res.redirect('/product' + req.params.id)
             })
             .catch(function(error) {
                 res.send(error);
