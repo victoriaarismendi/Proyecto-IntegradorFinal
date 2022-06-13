@@ -3,7 +3,7 @@ const sequelize = require ('sequelize');
 module.exports = function (sequelize, dataTypes) {
     
     const cols = {
-        id: { autoincrement:true,
+        id: { autoIncrement:true,
             primaryKey: true,
             type: dataTypes.INTEGER    
         },

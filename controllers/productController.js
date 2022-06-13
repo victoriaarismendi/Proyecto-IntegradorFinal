@@ -4,15 +4,15 @@ var db = require ('../database/models');
 
 const productController = {
     index: function(req,res){
-        db.Joya.findAll()
-        .then(function (joyas) {
+        db.Joya.findAll() //aca le digo al modelo que me traiga todo lo que encuentre
+        .then(function (joyas) { //cuando pase lo de arriba, que me traiga lo que encontro y me muestre la vista de index
             console.log(joyas);
             res.render('index', { joyas });
         })
         .catch(function (error) {
             res.send(error)
         });
-    },
+    }, //esto pasa del modulo de datos a la base de datos
     add: function(req, res){
         res.render('product-add')
     },
@@ -30,7 +30,7 @@ const productController = {
     store: function(req, res) {
         req.body.user_id = req.session.user.id;
         if (req.file) req.body.cover = (req.file.path).replace('public','');
-        db.Joya.create(req.body)
+        db.Joya.create(req.body) 
             .then(function() {
                 res.redirect('/')
             })
