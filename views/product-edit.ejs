@@ -1,0 +1,57 @@
+
+<%- include('./partials/head') %>
+
+<body class="fondoProduct-add">
+  <!-- Header -->
+ <% if (locals.user) { %>
+   <%- include('./partials/headerLogueado.ejs') %>
+ <% } else{ %>
+ <%- include('./partials/header.ejs') %>
+ <% } %>
+ <!-- /Header -->
+  <div class="container products-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="products-title">Editar productos</h2>
+      </div>
+      
+      <section class="form-login">
+       <article class="formulario">
+         <form  method="post" enctype="multipart/form-data"> 
+           <div class="form-group">
+             <label class="form-texto-arriba">Imagen del producto</label>
+             <input type="file" class="form-control" name= "imagen"id="imagen"
+               aria-describedby="emailHelp" placeholder="" value="<%= joyas.imagen %> ">
+           
+           </div>
+           <div class="form-group">
+             <label class="form-texto-arriba">Nombre del producto</label>
+             <input type="text" class="form-control" name="nombre"id="nombre"
+               placeholder="Creá un nombre para tu producto" value="<%= joyas.producto %> ">
+           </div>
+           <div class="form-group">
+             <label class="form-texto-arriba">Descripción</label>
+             <input type="text" class="form-control" name= "material" id="material"
+               placeholder="Describí tu producto" value="<%= joyas.material %> ">
+           </div>
+           <div class="form-group">
+             <label class="form-texto-arriba">Fecha de carga</label>
+             <input type="date" class="form-control" name ="fechaDeCarga"id="fechaDeCarga"
+               placeholder="" value="<%= joyas.fechaDeCarga.toString() %> ">
+           </div>
+           
+           <button type="submit" class="btn-primary" >Cambiar</button>
+         </form>
+       </article>
+       <article class="foto-login">
+        <img class="foto-lily" src="/images/lilycollinsedit.jpeg" alt="">
+       </article>
+
+     </section>
+
+
+      <!-- footer -->
+      <%- include('./partials/footer.ejs') %>
+      <!-- /footer -->
+
+</body>

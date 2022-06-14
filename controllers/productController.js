@@ -7,7 +7,6 @@ const productController = {
         db.Joya.findAll({
             include: {all: true, nested: false },
             order: [ ['id', 'DESC' ]],
-          
 
         }
         ) //aca le digo al modelo que me traiga todo lo que encuentre
@@ -46,8 +45,11 @@ const productController = {
     },
 
     delete: function(req, res) {
+        if(!req.session.user){
+            throw Error('Not authorized.')
+        }
         db.Joya.destroy({ where: {id: req.params.id}})
-            .then(function(joyas) {
+            .then(function() {
                 res.redirect('/')
             })
             .catch(function(error) {
@@ -55,10 +57,10 @@ const productController = {
             })
     },
 
-    edit: function(req, res) {
+    edit: function(req, res) { //mezcla entre el show y el add
         db.Joya.findByPk(req.params.id)
-            .then(function() {
-                res.render('joyas-edit', {joyas});
+            .then(function(joyas) {
+                res.render('product-edit', {joyas});
             })
             .catch(function(error) {
                 res.send(error);
@@ -68,11 +70,14 @@ const productController = {
     update: function(req, res) {
         db.Joya.update(req.body, { where: { id: req.params.id } })
             .then(function(joyas) {
+                console.log(joyas);
                 res.redirect('/')
             })
             .catch(function(error) {
                 res.send(error);
             })
+
+           
     },
     comment: function(req, res) {
         if (!req.session.user) { 

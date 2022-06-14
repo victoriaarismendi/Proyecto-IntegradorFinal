@@ -15,7 +15,7 @@
 
 			<h2 class="products-title"><%= joyas.producto %></h2>
 			<p class="product-detail-description">
-				<a href="/product/id/0-add">Editar</a>
+				<a href="/product/<%= joyas.id %>/edit">Editar</a>
 			</p>
 		</div>
 		<div class="product-detail">
@@ -31,25 +31,28 @@
 					<p class="product-detail-description">
 						Fecha de carga: <%= joyas.fechaDeCarga %>
 					</p>
-					<form action="joyas/<%= joyas.id%>/delete" method="POST"></form>
-					<input class="btn btn-danger" type="button" value="Borrar">
+
+					<form action="/product/<%= joyas.id %>/delete" method="POST">
+					<input class="btn btn-danger" type="submit" value="Borrar">
+					</form>
 				</article>
 				<div class="col-12 col-lg-4">
-				<h2>comentarios</h2>
-					<% for( let i = 0; i < joyas.comentarios.length; i++) { %> 
+					<h2>comentarios</h2>
+					<% for( let i = 0; i < joyas.comentarios.length; i++) { %>
 					<div class="card mb-2">
 						<div class="card-body">
 							<b><%= joyas.comentarios[i].user.nombre %> </b></br>
-							<%= joyas.comentarios[i].comentario %> 
+							<%= joyas.comentarios[i].comentario %>
 						</div>
-					</div> 
-					
-					
+					</div>
+
+
 					<%}%>
 
 					<form class="form" action="/product/<%= joyas.id %>/comment" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button" name="comentario" id="comentario">AGREGAR COMENTARIO</button>
+					<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+					<button type="submit" class="buy-now-button" name="comentario" id="comentario">AGREGAR
+						COMENTARIO</button>
 					</form>
 				</div>
 			</div>
