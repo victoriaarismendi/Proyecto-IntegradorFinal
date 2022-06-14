@@ -105,19 +105,21 @@ const indexController = {
             if (user) {
                 throw Error('Email already in use')
             }
+            if (req.file) req.body.imagen = (req.file.path).replace('public','');
         } catch (error) {
             res.render('register', {
                 error: error.message
             });
             return;
         }
-
+        if (req.file) req.body.fotoDePerfil = (req.file.path).replace('public','');
         const hashedPassword = hasher.hashSync(req.body.contraseña, 10);
         db.User.create({
                 nombre: req.body.nombre,
                 contraseña: hashedPassword,
                 email: req.body.email,
-                fechaDeNacimiento: req.body.fechaDeNacimiento
+                fechaDeNacimiento: req.body.fechaDeNacimiento,
+                fotoDePerfil: req.body.fotoDePerfil
             })
             .then(function () {
                 res.redirect('/login');

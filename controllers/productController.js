@@ -33,9 +33,15 @@ const productController = {
     },
     
     store: function(req, res) {
-        req.body.user_id = req.session.user.id;
-        if (req.file) req.body.cover = (req.file.path).replace('public','');
-        db.Joya.create(req.body) 
+        /* req.body.user_id = req.session.user.id; */
+        if (req.file) req.body.imagen = (req.file.path).replace('public','');
+        db.Joya.create({
+            producto: req.body.nombre,
+            imagen: req.body.imagen,
+            material: req.body.material,
+            fechaDeCarga: req.body.fechaDeCarga,
+            usuario_id: req.session.user.id
+        }) 
             .then(function() {
                 res.redirect('/')
             })
