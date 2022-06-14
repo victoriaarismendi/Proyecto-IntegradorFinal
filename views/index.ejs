@@ -24,7 +24,7 @@
 			<div class="col-12">
 				<h2 class="products-title">Nuestros Productos</h2>
 			</div>
-			
+
 			<!-- Bucle de products -->
 
 			<% for( let index = 0; index < joyas.length; index++ ) { %>
@@ -32,7 +32,7 @@
 				<section class="product-box">
 					<a class ="a-index"href="/product/id/<%= joyas[index].id%>">
 						<figure class="product-box_image">
-							<img src="<%= joyas[index].imagen %> " alt="cafetera moulinex">
+							<img src="<%= joyas[index].imagen %>" alt="">
 						</figure>
 						<article class="product-box_data">
 							<h2><%= joyas[index].producto%></h2>
