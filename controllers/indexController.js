@@ -40,9 +40,11 @@ const indexController = {
                 res.render('index', {
                     joyas
                 });
+               // if (!joyas) throw Error ('Producto no encontrado')
             })
             .catch(function (error) {
-                res.send(error)
+                res.render(error)
+                
             });
     },
 
