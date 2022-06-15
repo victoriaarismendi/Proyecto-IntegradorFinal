@@ -34,7 +34,23 @@ myProfile: function(req, res) {
             res.redirect('/')
         }
        
-    }
+    },
+    /*procesarEdit: function(req,res){
+       let idEdit = req.params.id;
+
+       db.User.update(
+        {
+            nombre: req.body.nombre,
+            email: req.body.email,
+            fechaDeNacimiento: req.body.fechaDeNacimiento,
+            fotoDePerfil: req.body.fotoDePerfil
+        },
+        { where : {id: idEdit}
+    })
+
+
+       
+    }*/
 }
 
 module.exports = profileController;
