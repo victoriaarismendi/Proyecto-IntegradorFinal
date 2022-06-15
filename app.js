@@ -33,20 +33,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
   if (!req.session.user) {
+    //que busque el usuario
       db.User.findByPk (req.cookies.userId)
       .then (function(user) {
+    //actue como logueado
       req.session.user = user;
       next ();
     })
   } else {
     next ();
   }
-})
-
+}) 
+ 
 
 // Session middleware
 app.use(function(req, res, next) {
-  res.locals.user = req.session.user;
+  res.locals.user = req.session.user; //me permite usar la funcion locals que me srive para lo del header. No tengo la necesidad de pasarlo por el controlador por ejemplo
   next();
 })
 

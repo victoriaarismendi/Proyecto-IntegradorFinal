@@ -62,7 +62,7 @@ const indexController = {
                     if (req.body.rememberme) {
                         res.cookie('userId', user.id, {
                             maxAge: 1000 * 60 * 60 * 24 * 7
-                        })
+                        }) //la cookie vive una semana
                     }
                     res.redirect('/');
                 } else {

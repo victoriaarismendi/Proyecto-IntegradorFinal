@@ -1,5 +1,7 @@
 //var joyas = require ('../db/data');
 var db = require ('../database/models');
+var multer = require('multer');
+const upload = multer({dest: 'public/images/upload'}) //destinantion a donde quiero que se guarden las imagenes 
 
 
 const productController = {
@@ -34,13 +36,13 @@ const productController = {
     
     store: function(req, res) {
         /* req.body.user_id = req.session.user.id; */
-        if (req.file) req.body.imagen = (req.file.path).replace('public','');
+        if (req.file) req.body.imagen = (req.file.path).replace('public',''); //si viene un archivo fijate de traer la direccion local donde esta este archivo sacale public porque uqiero gurdqar todo sin el public
         db.Joya.create({
             producto: req.body.nombre,
             imagen: req.body.imagen,
             material: req.body.material,
             fechaDeCarga: req.body.fechaDeCarga,
-            usuario_id: req.session.user.id
+           /* usuario_id: req.session.user.id */
         }) 
             .then(function() {
                 res.redirect('/')
@@ -64,6 +66,7 @@ const productController = {
     },
 
     edit: function(req, res) { //mezcla entre el show y el add
+       
         db.Joya.findByPk(req.params.id)
             .then(function(joyas) {
                 res.render('product-edit', {joyas});
