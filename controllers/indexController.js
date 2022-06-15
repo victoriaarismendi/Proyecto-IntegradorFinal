@@ -106,11 +106,9 @@ const indexController = {
                 throw Error('Email already in use')
             }
             if (req.file) req.body.imagen = (req.file.path).replace('public','');
-        } catch (error) {
-            res.render('register', {
-                error: error.message
-            });
-            return;
+        } catch (err) {
+           return res.render('register', {error: err.message });
+            
         }
         if (req.file) req.body.fotoDePerfil = (req.file.path).replace('public','');
         const hashedPassword = hasher.hashSync(req.body.contraseña, 10);

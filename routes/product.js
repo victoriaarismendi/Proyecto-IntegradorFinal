@@ -11,7 +11,9 @@ router.post('/add', upload.single('imagen'), productController.store);
 
 router.get ('/:id/edit', productController.edit);
 router.post('/:id/edit', productController.update);
+
 router.post('/:id/delete', productController.delete);
+
 
 router.post('/:id/comment', productController.comment);
 
