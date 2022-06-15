@@ -10,7 +10,6 @@ router.post('/logout', indexController.logout);
 router.post ('/login', indexController.access);
 router.get('/register', indexController.register);
 router.post ('/register', upload.single('fotoDePerfil') ,indexController.store);
-router.get ('/searchResults', indexController.index);
 router.get ('/search', indexController.search);
 
 

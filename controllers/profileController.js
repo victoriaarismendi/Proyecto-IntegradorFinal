@@ -35,22 +35,22 @@ myProfile: function(req, res) {
         }
        
     },
-    /*procesarEdit: function(req,res){
-       let idEdit = req.params.id;
+    procesarEdit: function(req, res){
+        req.body.contraseña =bcrypt.hashSync(req.body.contraseña, 10)
+        if (req.file) req.body.imagen = (req.file.path).replace('public', '');
+        db.User.update(req.body,{where: {id: req.session.user.id}})
+            .then(function(data){
+                if (req.file){
+                    req.session.user.fotoDePerfil = req.body.fotoDePerfil;
+                   
+                }
+                res.redirect('/')
+            })
 
-       db.User.update(
-        {
-            nombre: req.body.nombre,
-            email: req.body.email,
-            fechaDeNacimiento: req.body.fechaDeNacimiento,
-            fotoDePerfil: req.body.fotoDePerfil
-        },
-        { where : {id: idEdit}
-    })
-
-
-       
-    }*/
-}
+            .catch(function(error){
+                res.send(error)
+            })
+    }
+};
 
 module.exports = profileController;

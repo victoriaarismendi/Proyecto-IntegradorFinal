@@ -2,6 +2,7 @@
 var db = require('../database/models');
 var op = db.Sequelize.Op;
 var hasher = require('bcryptjs');
+const data = require('../db/data');
 
 
 const indexController = {
@@ -16,39 +17,6 @@ const indexController = {
             title: 'login'
         });
     },
-
-
-    search: function (req, res) {
-        db.Joya.findAll({
-                where: {
-                    [op.or]: [{
-                            producto: {
-                                [op.like]: "%" + req.query.search + "%"
-                            }
-                        },
-                        {
-                            material: {
-                                [op.like]: "%" + req.query.search + "%"
-                            }
-                        }
-                    ]
-                },
-                include: [{
-                    association: 'usuario'
-                }]
-            }).then(function (joyas) {
-                res.render('index', {
-                    joyas
-                });
-               // if (!joyas) throw Error ('Producto no encontrado')
-            })
-            .catch(function (error) {
-                res.render(error)
-                
-            });
-    },
-
-
 
 
     access: function (req, res, next) {
@@ -96,7 +64,7 @@ const indexController = {
             if (!req.body.nombre) {
                 throw Error('Not username provided.')
             }
-            if (req.body.contraseña.length < 4) {
+           if (req.body.contrasena.length < 4) {
                 throw Error('Password too short.')
             }
             const user = await db.User.findOne({
@@ -113,7 +81,7 @@ const indexController = {
             
         }
         if (req.file) req.body.fotoDePerfil = (req.file.path).replace('public','');
-        const hashedPassword = hasher.hashSync(req.body.contraseña, 10);
+        const hashedPassword = hasher.hashSync(req.body.contrasena, 10);
         db.User.create({
                 nombre: req.body.nombre,
                 contraseña: hashedPassword,
@@ -128,9 +96,27 @@ const indexController = {
                 res.send(error);
             })
     },
-    searchResults: function (req, res) {
-        res.render('searchResults')
-    }
+    
+    search: function (req, res) {
+        db.Joya.findAll({
+                where: {
+                    [op.or]: [
+                        {producto: {[op.like]: "%" + req.query.search + "%"}},
+                        {material: {[op.like]: "%" + req.query.search + "%"}}
+                    ]
+                },
+                include: {all: true, nested:true}
+                })
+
+        .then (function (joyas) {
+                res.render('search-results',{products:joyas});
+        })
+
+        .catch(function (error) {
+            res.send(error)
+                
+        });
+    },
 };
 
 module.exports = indexController;

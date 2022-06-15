@@ -1,0 +1,47 @@
+<%- include('./partials/head') %>
+
+<% if (locals.user) { %>
+<%- include('./partials/headerLogueado.ejs') %>
+<% } else{ %>
+<%- include('./partials/header.ejs') %>
+<% } %>
+
+
+<body>
+    <div class="container products-wrapper">
+
+
+        <div class="row">
+            <div class="col-12">
+                <h2 class="products-title">Resultados de búsqueda</h2>
+            </div>
+            <% if (products.length == 0) {%>
+            <h2 class="products-title">No se han encontrado resultados para tu busqueda.</h2>
+            <% }else { %>
+            <% for( let index = 0; index < products.length; index++ ) { %>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <section class="product-box">
+                    <a class="a-index" href="/product/id/<%= products[index].id%>">
+                        <figure class="product-box_image">
+                            <img src="<%= products[index].imagen %>" alt="">
+                        </figure>
+                        <article class="product-box_data">
+                            <h2><%= products[index].producto%></h2>
+                            <p>Hecho de <%= products[index].material %> </p>
+                            <p><%= products[index].piedras %> </p>
+                        </article>
+                    </a>
+                </section>
+            </div>
+
+
+            <% }} %>
+
+
+        </div>
+    </div>
+</body>
+
+<!-- footer -->
+<%- include('./partials/footer.ejs') %>
+<!-- /footer -->

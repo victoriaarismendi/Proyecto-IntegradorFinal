@@ -8,7 +8,7 @@ const upload = multer({dest: 'public/images/uploads'});
 
 router.get('/id/:id',profileController.index);
 router.get ('/edit/:id', profileController.edit);
-router.post ('/edit/:id', profileController.edit);
+router.post ('/edit/:id', upload.single('imagen'), profileController.procesarEdit);
 
 
 module.exports = router;
