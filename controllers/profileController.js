@@ -7,7 +7,7 @@ const upload = multer({dest: 'public/images/upload'})
 const profileController = {
 
 myProfile: function(req, res) {
-        db.User.findByPk(req.session.user.id, { include: [ { association: 'joya' } ] })
+        db.User.findByPk(req.session.user.id, { include: [ { association: 'usuario' } ] })
             .then(function (user) {
                 res.render('profile', { user });
             })
