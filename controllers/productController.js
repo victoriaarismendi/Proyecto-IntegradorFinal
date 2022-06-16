@@ -79,18 +79,14 @@ const productController = {
 
     update: function(req, res) {
        
+        console.log(req.body)
+
         if (req.file) req.body.imagen = (req.file.path).replace('public', '');
-        db.Joya.update({
-            producto: req.body.nombre,
-            imagen: req.body.imagen,
-            material: req.body.material,
-            fechaDeCarga: req.body.fechaDeCarga,
-            piedras: req.body.piedras,
-            
-        }, {
+        db.Joya.update(
+            req.body, 
+            {
             where: {id:req.body.id}
-        }
-        )
+        })
         .then(function(joya) {
             res.redirect('/')
         })

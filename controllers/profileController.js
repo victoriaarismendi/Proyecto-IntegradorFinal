@@ -17,7 +17,7 @@ myProfile: function(req, res) {
     },
 
     index: function(req, res){
-        db.User.findByPk(req.session.user.id, {includes: [{association: 'joya'}]})
+        db.User.findByPk(req.session.user.id, {includes: [{association: 'usuario'}]})
         .then(usuario=>{
             return res.render('profile',{
                 usuario: usuario
