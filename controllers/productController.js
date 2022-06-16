@@ -4,6 +4,7 @@ var multer = require('multer');
 const upload = multer({dest: 'public/images/upload'}) //destinantion a donde quiero que se guarden las imagenes 
 
 
+
 const productController = {
     index: function(req,res){
         db.Joya.findAll({
@@ -79,22 +80,19 @@ const productController = {
 
     update: function(req, res) {
        
-        console.log(req.body)
-
         if (req.file) req.body.imagen = (req.file.path).replace('public', '');
-        db.Joya.update(
-            req.body, 
-            {
-            where: {id:req.body.id}
-        })
-        .then(function(joya) {
-            res.redirect('/')
-        })
-        .catch(function(error) {
-            res.send(error);
-        })
+        db.Joya.update(req.body, { where: { id: req.params.id } })
+        
+            .then(function(joya) {
+                res.redirect('/')
+            })
+            .catch(function(error) {
+                res.send(error);
+            })
 
+           
     },
+
            
    
     comment: function(req, res) {

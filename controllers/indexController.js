@@ -27,7 +27,7 @@ const indexController = {
             })
             .then(function (user) {
                 if (!user) throw Error('User not found.')
-                if (hasher.compareSync(req.body.password, user.contraseña)) {
+                if (hasher.compareSync(req.body.password, user.contrasena)) {
                     req.session.user = user;
                     if (req.body.rememberme) {
                         res.cookie('userId', user.id, {
@@ -84,7 +84,7 @@ const indexController = {
         const hashedPassword = hasher.hashSync(req.body.contrasena, 10);
         db.User.create({
                 nombre: req.body.nombre,
-                contraseña: hashedPassword,
+                contrasena: hashedPassword,
                 email: req.body.email,
                 fechaDeNacimiento: req.body.fechaDeNacimiento,
                 fotoDePerfil: req.body.fotoDePerfil

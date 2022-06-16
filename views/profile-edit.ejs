@@ -18,32 +18,32 @@
 
 			<section class="form-login">
 				<article class="formulario">
-					<form action="/register" method="POST" enctype="multipart/form-data">
+					<form action="/profile/edit/<%= usuario.id %> " method="POST" enctype="multipart/form-data">
 						<div class="form-group">
 							<label class="form-texto-arriba">Correo electrónico</label>
 							<input type="email" class="form-control" id="email" name="email"
-								aria-describedby="emailHelp" placeholder="example@email.com">
+								aria-describedby="emailHelp" placeholder="example@email.com" value="<%= usuario.email %> ">
 
 						</div>
 						<div class="form-group">
 							<label class="form-texto-arriba">Nombre de Usuario</label>
 							<input type="text" class="form-control" id="nombre" name="nombre"
-								placeholder="Creá tu nombre de usuario">
+								placeholder="Creá tu nombre de usuario" value="<%= usuario.nombre %> "> 
 						</div>
 						<div class="form-group">
-							<label class="form-texto-arriba">Contraseña</label>
-							<input type="password" class="form-control" id="contraseña" name="contraseña"
+							<label class="form-texto-arriba">contrasena</label>
+							<input type="password" class="form-control" id="contrasena" name="contrasena"
 								placeholder="*********">
 						</div>
 						<div class="form-group">
 							<label class="form-texto-arriba">Fecha de nacimiento</label>
 							<input type="date" class="form-control" id="fechaDeNacimiento" name="fechaDeNacimiento"
-								placeholder="">
+								placeholder="" value="<%= usuario.fechaDeNacimiento %> ">
 						</div>
 						<div class="form-group">
 							<label class="form-texto-arriba">Foto de perfil</label>
 							<input type="file" class="form-control" id="fotoDePerfil" name="fotoDePerfil"
-								placeholder="">
+								placeholder="" value="<%= usuario.fotoDePerfil %> ">
 						</div>
 
 						<button type="submit" class="btn-primary">Crear</button>
