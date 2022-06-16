@@ -80,17 +80,27 @@ const productController = {
     update: function(req, res) {
        
         if (req.file) req.body.imagen = (req.file.path).replace('public', '');
-        db.Joya.update(req.body, { where: { id: req.params.id } })
-        
-            .then(function(joya) {
-                res.redirect('/')
-            })
-            .catch(function(error) {
-                res.send(error);
-            })
+        db.Joya.update({
+            producto: req.body.nombre,
+            imagen: req.body.imagen,
+            material: req.body.material,
+            fechaDeCarga: req.body.fechaDeCarga,
+            piedras: req.body.piedras,
+            
+        }, {
+            where: {id:req.body.id}
+        }
+        )
+        .then(function(joya) {
+            res.redirect('/')
+        })
+        .catch(function(error) {
+            res.send(error);
+        })
 
-           
     },
+           
+   
     comment: function(req, res) {
         if (!req.session.user) { 
             throw Error('Iniciá sesión o registrate para comentar')
