@@ -35,14 +35,15 @@ const productController = {
     },
     
     store: function(req, res) {
-        /* req.body.user_id = req.session.user.id; */
+        //req.body.user_id = req.session.user.id; 
         if (req.file) req.body.imagen = (req.file.path).replace('public',''); //si viene un archivo fijate de traer la direccion local donde esta este archivo sacale public porque uqiero gurdqar todo sin el public
         db.Joya.create({
             producto: req.body.nombre,
             imagen: req.body.imagen,
             material: req.body.material,
             fechaDeCarga: req.body.fechaDeCarga,
-           /* usuario_id: req.session.user.id */
+            piedras: req.body.piedras,
+            usuario_id: req.session.user.id 
         }) 
             .then(function() {
                 res.redirect('/')
@@ -65,7 +66,7 @@ const productController = {
             })
     },
 
-    edit: function(req, res) { //mezcla entre el show y el add
+    edit: function(req, res) { 
        
         db.Joya.findByPk(req.params.id)
             .then(function(joyas) {
@@ -77,6 +78,7 @@ const productController = {
     },
 
     update: function(req, res) {
+       
         if (req.file) req.body.imagen = (req.file.path).replace('public', '');
         db.Joya.update(req.body, { where: { id: req.params.id } })
         
@@ -93,9 +95,7 @@ const productController = {
         if (!req.session.user) { 
             throw Error('Iniciá sesión o registrate para comentar')
         }
-        // Set user from session user
         req.body.usuario_id = req.session.user.id;
-        // Set book from url params
         req.body.producto_id = req.params.id;
         db.Comentario.create(req.body)
             .then(function() {
