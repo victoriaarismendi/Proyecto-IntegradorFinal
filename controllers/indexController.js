@@ -64,7 +64,7 @@ const indexController = {
             if (!req.body.nombre) {
                 throw Error('Not username provided.')
             }
-           if (req.body.contrasena.length < 4) {
+            if (req.body.contrasena.length < 4) {
                 throw Error('Password too short.')
             }
             const user = await db.User.findOne({
@@ -75,12 +75,14 @@ const indexController = {
             if (user) {
                 throw Error('Email already in use')
             }
-            if (req.file) req.body.imagen = (req.file.path).replace('public','');
+            if (req.file) req.body.imagen = (req.file.path).replace('public', '');
         } catch (err) {
-           return res.render('register', {error: err.message });
-            
+            return res.render('register', {
+                error: err.message
+            });
+
         }
-        if (req.file) req.body.fotoDePerfil = (req.file.path).replace('public','');
+        if (req.file) req.body.fotoDePerfil = (req.file.path).replace('public', '');
         const hashedPassword = hasher.hashSync(req.body.contrasena, 10);
         db.User.create({
                 nombre: req.body.nombre,
@@ -96,26 +98,38 @@ const indexController = {
                 res.send(error);
             })
     },
-    
+
     search: function (req, res) {
         db.Joya.findAll({
                 where: {
-                    [op.or]: [
-                        {producto: {[op.like]: "%" + req.query.search + "%"}},
-                        {material: {[op.like]: "%" + req.query.search + "%"}}
+                    [op.or]: [{
+                            producto: {
+                                [op.like]: "%" + req.query.search + "%"
+                            }
+                        },
+                        {
+                            material: {
+                                [op.like]: "%" + req.query.search + "%"
+                            }
+                        }
                     ]
                 },
-                include: {all: true, nested:true}
-                })
+                include: {
+                    all: true,
+                    nested: true
+                }
+            })
 
-        .then (function (joyas) {
-                res.render('search-results',{products:joyas});
-        })
+            .then(function (joyas) {
+                res.render('search-results', {
+                    products: joyas
+                });
+            })
 
-        .catch(function (error) {
-            res.send(error)
-                
-        });
+            .catch(function (error) {
+                res.send(error)
+
+            });
     },
 };
 

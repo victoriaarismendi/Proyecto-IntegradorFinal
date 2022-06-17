@@ -51,8 +51,14 @@
 					<div class="card mb-2">
 						<div class="card-body">
 							<img src="<%= joyas.comentarios[i].user.fotoDePerfil %> " alt="" class="foto-comentario">
-							<b><a href="/profile/id/<%= joyas.id %> "></a><%= joyas.comentarios[i].user.nombre %> </b></br>
+							<b><a href="/profile/id/<%= joyas.id %>  "></a><%= joyas.comentarios[i].user.nombre %> </b></br>
 							<%= joyas.comentarios[i].comentario %>
+							<br></br>
+							<% if (locals.user && user.id == joyas.usuario_id) { %>
+								<form action="/product/<%= joyas.id %>/delete" method="POST">
+								  <input class="btn btn-danger" type="submit" value="Borrar">
+								</form>
+							  <% } %>
 							
 						</div>
 						
