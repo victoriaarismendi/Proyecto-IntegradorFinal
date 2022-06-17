@@ -32,7 +32,7 @@
 						Fecha de carga: <%= joyas.fechaDeCarga %>
 					</p>
 					<p class="product-detail-description">
-						Subido por: <%= joyas.usuario_id %>
+						Subido por: <%= joyas.usuario.nombre %>
 					</p>
 
 					<form action="/product/<%= joyas.id %>/delete" method="POST">
@@ -44,8 +44,9 @@
 					<% for( let i = 0; i < joyas.comentarios.length; i++) { %>
 					<div class="card mb-2">
 						<div class="card-body">
-							<b><%= joyas.comentarios[i].user.nombre %> </b></br>
+							<b><a href="/profile/id/<%= joyas.id %> "></a><%= joyas.comentarios[i].user.nombre %> </b></br>
 							<%= joyas.comentarios[i].comentario %>
+							<img src="<%= joyas.comentarios[i].user.fotoDePerfil %> " alt="">
 						</div>
 					</div>
 
