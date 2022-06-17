@@ -10,7 +10,9 @@ module.exports = function (sequelize, dataTypes) {
         email: { type: dataTypes.STRING },
         fechaDeNacimiento: { type: dataTypes.STRING },
         fotoDePerfil: { type: dataTypes.STRING },
-        updatedAt: { type: dataTypes.DATE}
+        updatedAt: { type: dataTypes.DATE},
+        createdAt: { type: dataTypes.DATE }
+
     }
 
     const configs = {

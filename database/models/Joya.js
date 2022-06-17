@@ -13,7 +13,10 @@ module.exports = function (sequelize, dataTypes) {
         imagen:{type: dataTypes.STRING},
         fechaDeCarga:{type: dataTypes.DATE},
         //usuario_id:{type: dataTypes.STRING}
-        updatedAt:{type: dataTypes.DATE}
+        updatedAt:{type: dataTypes.DATE},
+        //createdAt: { type: dataTypes.DATE }
+
+
     }
 
     const configs = {
