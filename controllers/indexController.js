@@ -25,14 +25,14 @@ const indexController = {
                     email: req.body.username
                 }
             })
-            .then(function (user) {
+            .then(function (user) { //user es el resultado de todo lo que puse arriba, el resultado de lo que guarde en la base de datos. 
                 if (!user) throw Error('User not found.')
-                if (hasher.compareSync(req.body.password, user.contrasena)) {
-                    req.session.user = user;
-                    if (req.body.rememberme) {
+                if (hasher.compareSync(req.body.password, user.contrasena))  {
+                    req.session.user = user; //guarda en la sesion, o sea del lado el servidor en esto. En adelante voy a identificar todas las request del mismo usuario por esto
+                    if (req.body.rememberme) { //si el usuario clickeo rememberme agrego una cookie 
                         res.cookie('userId', user.id, {
                             maxAge: 1000 * 60 * 60 * 24 * 7
-                        }) //la cookie vive una semana
+                        }) //guardo del lado del cliente una cookie que dura 7 horas
                     }
                     res.redirect('/');
                 } else {

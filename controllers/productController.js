@@ -13,14 +13,14 @@ const productController = {
                 include: {
                     all: true,
                     nested: false
-                },
+                }, //con esto le digo que me traiga todas las relaciones 
                 order: [
                     ['id', 'DESC']
                 ],
 
             }) //aca le digo al modelo que me traiga todo lo que encuentre
             .then(function (joyas) { //cuando pase lo de arriba, que me traiga lo que encontro y me muestre la vista de index
-                console.log(joyas);
+                
                 res.render('index', {
                     joyas
                 });
@@ -126,9 +126,10 @@ const productController = {
         }
         req.body.usuario_id = req.session.user.id;
         req.body.producto_id = req.params.id;
+        
         db.Comentario.create(req.body)
             .then(function () {
-                res.redirect('/product/id/' + req.params.id)
+                res.redirect(req.params.id)
             })
             .catch(function (error) {
                 res.send(error);

@@ -22,21 +22,28 @@ const profileController = {
                 })
 
             })
+            .catch(function(error){
+                res.send(error)
+            })
     },
 
     index: function (req, res) {
-        db.User.findByPk(req.params.id, {
-                include: [{
-                    all: true,
-                    nested: true
-                }]
+        if(req.session.user){
+        if(req.session.user.id == req.params.id){res.redirect('/profile/myprofile')}}
+        db.User.findByPk(req.params.id, {include: {all: true, nested: false}})
+        .then(function(data){
+            db.Joya.findAll({
+                where: [
+                    {usuario_id: req.params.id}
+                ],
+                include: {all: true, nested: false}
+            }) .then(function(products){
+                console.log(products);
+                res.render('profile', {user: data, products})
             })
-            .then(usuario => {
-                return res.render('profile', {
-                    usuario: usuario
-                })
 
-            })
+    
+        })
 
 
 

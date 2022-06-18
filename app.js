@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Cookies middleware
 
-app.use(function(req, res, next) {
+app.use(function(req, res, next) { //esta para recuperarte si el usuario cerro la ventana o si el usuario cerro el servdor
   if (!req.session.user) {
     //que busque el usuario
       db.User.findByPk (req.cookies.userId)

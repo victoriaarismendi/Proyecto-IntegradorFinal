@@ -1,6 +1,6 @@
 <%- include('./partials/head') %>
 
-<body>
+<body class="bodyProducts">
 	<!-- Header -->
 	<% if (locals.user) { %>
 		<%- include('./partials/headerLogueado.ejs') %>
@@ -31,7 +31,7 @@
 					<ul class="ul-profile">
 						<li><%= usuario.joyas.length %> productos</li>
 						<li>200 seguidores</li>
-						<li>300 comentarios</li>
+						<li><%= usuario.comentarios.length %> comentarios</li>
 					</ul>
 				</div>
 			</div>
