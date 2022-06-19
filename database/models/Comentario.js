@@ -10,7 +10,8 @@ module.exports = function (sequelize, dataTypes) {
         usuario_id:{type: dataTypes.STRING},
         producto_id:{type: dataTypes.STRING},
         comentario:{type: dataTypes.STRING},
-        updatedAt: {type: dataTypes.DATE}
+        updatedAt: {type: dataTypes.DATE},
+        createdAt: {type: dataTypes.DATE}
     }
 
     const configs = {
@@ -30,7 +31,7 @@ module.exports = function (sequelize, dataTypes) {
             as: 'joya',
             foreignKey: 'producto_id'
         })
-    }  
+    }
 
 
     return Comentario;
