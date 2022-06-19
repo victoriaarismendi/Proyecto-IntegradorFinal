@@ -32,7 +32,7 @@
 						Fecha de carga: <%= joyas.fechaDeCarga %>
 					</p>
 					<p class="product-detail-description">
-						Subido por: <a href="/profile/<%=joyas.usuario?.id %>"> <%= joyas.usuario.nombre %></a> 
+						Subido por: <a href="/user/<%=joyas.usuario.id %>"> <%= joyas.usuario.nombre %></a> 
 					</p>
 
 					<!-- <form action="/product/<%= joyas.id %>/delete" method="POST">
@@ -51,7 +51,7 @@
 					<div class="card mb-2">
 						<div class="card-body">
 							<img src="<%= joyas.comentarios[i].user.fotoDePerfil %> " alt="" class="foto-comentario">
-							<b><a href="/profile/id/<%= joyas.id %>  "></a><%= joyas.comentarios[i].user.nombre %> </b></br>
+							<b><a href="/user/<%=joyas.usuario.id %>  "></a><%= joyas.comentarios[i].user.nombre %> </b></br>
 							<%= joyas.comentarios[i].comentario %>
 							<br></br>
 							<% if (locals.user && user.id == joyas.usuario_id) { %>
