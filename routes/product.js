@@ -12,7 +12,9 @@ router.post('/add', upload.single('imagen'), productController.store); //entre p
 router.get ('/:id/edit', productController.edit);
 router.post('/:id/edit', upload.single('imagen'),productController.update);
 
-router.post('/:id/delete', productController.delete);
+router.get('/id/:id/delete', productController.delete);
+router.post('/id/:id/delete', productController.delete);
+
 
 
 router.post('/:id/comment', productController.comment);

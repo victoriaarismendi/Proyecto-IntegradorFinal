@@ -80,6 +80,12 @@
 					</li> -->
 				</ul>
 			</nav>
+			<% if (locals.error) { %>
+				<div class="alert alert-danger" role="alert">
+					<%=error %>
+				</div>
+
+			<% } %>
 		</div>
 	</header>
 	<!-- /Header -->

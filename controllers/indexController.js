@@ -27,7 +27,7 @@ const indexController = {
             })
             .then(function (user) { //user es el resultado de todo lo que puse arriba, el resultado de lo que guarde en la base de datos. 
                 if (!user) throw Error('User not found.')
-                if (hasher.compareSync(req.body.password, user.contrasena))  {
+                if (hasher.compareSync(req.body.password, user.contrasena)) {
                     req.session.user = user; //guarda en la sesion, o sea del lado el servidor en esto. En adelante voy a identificar todas las request del mismo usuario por esto
                     if (req.body.rememberme) { //si el usuario clickeo rememberme agrego una cookie 
                         res.cookie('userId', user.id, {
@@ -74,12 +74,14 @@ const indexController = {
             })
             if (user) {
                 throw Error('Email already in use')
-            }
+            } //esto es una validacion a nivel base de datos y que sea unico
             if (req.file) req.body.imagen = (req.file.path).replace('public', '');
+
         } catch (err) {
             return res.render('register', {
-                error: err.message
+                error: err.message,
             });
+            next(); //estructura try catch es parecido a las promesas, si hay un error renderiza el formulario con un valor nuevo que es el error. en el que procesa el formulario, si viene un error, vuelvo a mostrar un error y nada mas
 
         }
         if (req.file) req.body.fotoDePerfil = (req.file.path).replace('public', '');
