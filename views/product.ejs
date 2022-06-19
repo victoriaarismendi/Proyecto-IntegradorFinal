@@ -51,7 +51,7 @@
 					<div class="card mb-2">
 						<div class="card-body">
 							<img src="<%= joyas.comentarios[i].user.fotoDePerfil %> " alt="" class="foto-comentario">
-							<b><a href="/profile/id/<%= joyas.comentarios[i].user.id %>  "></a><%= joyas.comentarios[i].user.nombre %> </b></br>
+							<b><a href="/profile/id/<%= joyas.comentarios[i].user.id %>  "></a><%= joyas.comentarios[i].user.nombre %></b>
 							<%= joyas.comentarios[i].comentario %>
 							<br></br>
 							<% if (locals.user && user.id == joyas.usuario_id) { %>
