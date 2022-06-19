@@ -22,6 +22,7 @@ const profileController = {
                 })
 
             })
+            
             .catch(function(error){
                 res.send(error)
             })
@@ -40,10 +41,12 @@ const profileController = {
             }) .then(function(products){
                 console.log(products);
                 res.render('profile', {user: data, products})
-            })
-
-    
+            }) 
+                    
         })
+        /*.then (function(user ){
+            res.render ('profile', {user})
+        }) */
 
 
 

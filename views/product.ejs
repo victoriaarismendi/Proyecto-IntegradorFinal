@@ -32,7 +32,7 @@
 						Fecha de carga: <%= joyas.fechaDeCarga %>
 					</p>
 					<p class="product-detail-description">
-						Subido por: <%= joyas.usuario.nombre %>
+						Subido por: <a href="/profile/<%=joyas.usuario.id %>"> <%= joyas.usuario.nombre %></a> 
 					</p>
 
 					<!-- <form action="/product/<%= joyas.id %>/delete" method="POST">
