@@ -12,7 +12,7 @@ module.exports = function (sequelize, dataTypes) {
         material:{type: dataTypes.STRING},
         imagen:{type: dataTypes.STRING},
         fechaDeCarga:{type: dataTypes.DATE},
-        //usuario_id:{type: dataTypes.STRING}
+       // porque esta comentado esto?? usuario_id:{type: dataTypes.STRING},
         updatedAt:{type: dataTypes.DATE},
         //createdAt: { type: dataTypes.DATE }
 
@@ -21,7 +21,7 @@ module.exports = function (sequelize, dataTypes) {
 
     const configs = {
         tableName: 'joyas',
-        timestamps: false
+        timestamps: true
     }
 
 

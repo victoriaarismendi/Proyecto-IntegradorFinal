@@ -30,6 +30,9 @@ const productController = {
             });
     }, //esto pasa del modulo de datos a la base de datos
     add: function (req, res) {
+        if(!req.session.user){ 
+            throw Error ('Not authorized')
+        }
         res.render('product-add')
     },
     show: function (req, res) {
@@ -51,7 +54,10 @@ const productController = {
     },
 
     store: function (req, res) {
-        //req.body.user_id = req.session.user.id; 
+        if(!req.session.user){ 
+            return res.render('product-add', {error:'Not authorized'})
+        }
+        req.body.usuario_id = req.session.user.id
         if (req.file) req.body.imagen = (req.file.path).replace('public', ''); //si viene un archivo fijate de traer la direccion local donde esta este archivo sacale public porque uqiero gurdqar todo sin el public
         db.Joya.create({
                 producto: req.body.nombre,
@@ -87,7 +93,9 @@ const productController = {
     },
 
     edit: function (req, res) {
-
+        if (!req.session.user) {
+            throw Error('Not authorized.')
+        }
         db.Joya.findByPk(req.params.id)
             .then(function (joyas) {
                 res.render('product-edit', {
@@ -124,8 +132,11 @@ const productController = {
         if (!req.session.user) {
             throw Error('Iniciá sesión o registrate para comentar')
         }
+        if(req.session.user){
         req.body.usuario_id = req.session.user.id;
         req.body.producto_id = req.params.id;
+        req.body.createdAt = new Date();
+        
         
         db.Comentario.create(req.body)
             .then(function () {
@@ -134,6 +145,8 @@ const productController = {
             .catch(function (error) {
                 res.send(error);
             })
+    
+        }
     },
 
 }

@@ -57,7 +57,8 @@ const profileController = {
                 usuario: req.session.user
             });
         } else {
-            res.redirect('/')
+            throw Error('Not authorized')
+          
         }
 
     },
