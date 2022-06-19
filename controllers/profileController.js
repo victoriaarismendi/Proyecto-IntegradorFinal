@@ -30,7 +30,7 @@ const profileController = {
 
     index: function (req, res) {
         if(req.session.user){
-        if(req.session.user.id == req.params.id){res.redirect('/profile/myprofile')}}
+        if(req.session.user.id == req.params.id){res.redirect('/profile ')}}
         db.User.findByPk(req.params.id, {include: {all: true, nested: false}})
         .then(function(data){
             db.Joya.findAll({

@@ -124,6 +124,7 @@ const productController = {
         if (!req.session.user) {
             throw Error('Iniciá sesión o registrate para comentar')
         }
+        if(req.session.user){
         req.body.usuario_id = req.session.user.id;
         req.body.producto_id = req.params.id;
         
@@ -134,6 +135,8 @@ const productController = {
             .catch(function (error) {
                 res.send(error);
             })
+    
+        }
     },
 
 }
