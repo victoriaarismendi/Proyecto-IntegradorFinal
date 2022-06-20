@@ -29,10 +29,10 @@
 						Piedras: <%= joyas.piedras %>
 					</p>
 					<p class="product-detail-description">
-						Fecha de carga: <%= joyas.fechaDeCarga %>
+						Fecha de carga: <%= joyas.createdAt %>
 					</p>
 					<p class="product-detail-description">
-						Subido por: <a href="/user/<%=joyas.usuario.id %>"> <%= joyas.usuario.nombre %></a> 
+						Subido por: <a href="/profile/id/<%=joyas.usuario.id %>"> <%= joyas.usuario.nombre %></a> 
 					</p>
 
 					<!-- <form action="/product/<%= joyas.id %>/delete" method="POST">
@@ -40,7 +40,7 @@
 					</form> --> 
 					
 					<% if (locals.user && user.id == joyas.usuario_id) { %>
-						<form action="/product/<%= joyas.id %>/delete" method="POST">
+						<form action="/product/id/<%= joyas.id %>/delete" method="POST">
 						  <input class="btn btn-danger" type="submit" value="Borrar">
 						</form>
 					  <% } %> 
@@ -51,14 +51,10 @@
 					<div class="card mb-2">
 						<div class="card-body">
 							<img src="<%= joyas.comentarios[i].user.fotoDePerfil %> " alt="" class="foto-comentario">
-							<b><a href="/profile/id/<%= joyas.comentarios[i].user.id %>  "></a><%= joyas.comentarios[i].user.nombre %></b>
+							<b><a href="/profile/id/<%= joyas.comentarios[i].user.id %>"><%= joyas.comentarios[i].user.nombre %></a></b>
 							<%= joyas.comentarios[i].comentario %>
 							<br></br>
-							<% if (locals.user && user.id == joyas.usuario_id) { %>
-								<form action="/product/id/<%= joyas.id %>/delete" method="POST">
-								  <input class="btn btn-danger" type="submit" value="Borrar">
-								</form>
-							  <% } %>
+							
 							
 						</div>
 						

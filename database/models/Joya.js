@@ -11,10 +11,9 @@ module.exports = function (sequelize, dataTypes) {
         piedras:{type: dataTypes.STRING},
         material:{type: dataTypes.STRING},
         imagen:{type: dataTypes.STRING},
-        fechaDeCarga:{type: dataTypes.DATE},
-       // porque esta comentado esto?? usuario_id:{type: dataTypes.STRING},
+        usuario_id:{type: dataTypes.STRING},
         updatedAt:{type: dataTypes.DATE},
-        //createdAt: { type: dataTypes.DATE }
+        createdAt: { type: dataTypes.DATE }
 
 
     }
