@@ -9,6 +9,7 @@ const indexController = {
     index: function (req, res) {
         res.redirect('/product')
     },
+
     login: function (req, res) {
         if (req.session.user) {
             res.redirect('/')
@@ -17,7 +18,6 @@ const indexController = {
             title: 'login'
         });
     },
-
 
     access: function (req, res, next) {
         db.User.findOne({
@@ -36,7 +36,7 @@ const indexController = {
                     }
                     res.redirect('/');
                 } else {
-                    throw Error('Invalid credentials.')
+                    throw Error('Email o contraseña incorrecto')
                 }
             })
             .catch(function (error) {
@@ -49,6 +49,7 @@ const indexController = {
         res.clearCookie('userId');
         res.redirect('/')
     },
+    
     register: function (req, res) {
         if (req.session.user) {
             res.redirect('/')
@@ -113,7 +114,13 @@ const indexController = {
                             material: {
                                 [op.like]: "%" + req.query.search + "%"
                             }
+                        },
+                        {
+                            piedras: {
+                                [op.like]: "%" + req.query.search + "%"
+                            }
                         }
+
                     ]
                 },
                 include: {

@@ -14,9 +14,12 @@
 		<div class="d-flex align-items-center">
 
 			<h2 class="products-title"><%= joyas.producto %></h2>
-			<p class="product-detail-description">
-				<a href="/product/<%= joyas.id %>/edit">Editar</a>
-			</p>
+	<% if (locals.user && user.id == joyas.usuario_id) { %>
+		<p class="product-detail-description">
+			<a href="/product/<%= joyas.id %>/edit">Editar</a>
+		</p>
+	<% } %>
+			
 		</div>
 		<div class="product-detail">
 			<div class="row">

@@ -29,12 +29,14 @@ const productController = {
                 res.send(error)
             });
     }, //esto pasa del modulo de datos a la base de datos
+
     add: function (req, res) {
         if(!req.session.user){ 
-            throw Error ('Not authorized')
+            throw Error ('Debes iniciar sesión o registrarte para agregar un producto')
         }
         res.render('product-add')
     },
+
     show: function (req, res) {
         db.Joya.findByPk(req.params.id, {
                 include: {
@@ -125,8 +127,6 @@ const productController = {
 
 
     },
-
-
 
     comment: function (req, res) {
 

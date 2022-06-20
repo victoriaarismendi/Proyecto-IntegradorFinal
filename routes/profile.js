@@ -6,7 +6,7 @@ const upload = multer({dest: 'public/images/uploads'});
 
 
 
-router.get('/id/:id',profileController.index);
+router.get('/id/:id',profileController.profile);
 
 router.get('/myprofile',profileController.myProfile);
 router.get ('/edit/:id', profileController.edit);

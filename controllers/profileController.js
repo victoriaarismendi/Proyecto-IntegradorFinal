@@ -10,6 +10,9 @@ var bcrypt = require('bcryptjs');
 const profileController = {
 
     myProfile: function (req, res) {
+        if(!req.session.user){ 
+            return res.render('login', {error:'Ingresá sesión para ver tu perfil'})
+        }
         db.User.findByPk(req.session.user.id, {
                 include: [{
                     all: true,
@@ -28,7 +31,7 @@ const profileController = {
             })
     },
 
-    index: function (req, res) {
+    profile: function (req, res) {
         if(req.session.user){
         if(req.session.user.id == req.params.id){res.redirect('/profile/myprofile')}}
         db.User.findByPk(req.params.id, {include: {all: true, nested: false}})
@@ -39,6 +42,7 @@ const profileController = {
 
 
     },
+
     edit: function (req, res) {
         if (req.session.user && req.session.user.id == req.params.id) {
             return res.render('profile-edit', {
@@ -50,6 +54,7 @@ const profileController = {
         }
 
     },
+    
     procesarEdit: async function (req, res) {
         try {
             if (!req.body.email) {
