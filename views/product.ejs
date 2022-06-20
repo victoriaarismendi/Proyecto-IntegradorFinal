@@ -14,12 +14,9 @@
 		<div class="d-flex align-items-center">
 
 			<h2 class="products-title"><%= joyas.producto %></h2>
-	<% if (locals.user && user.id == joyas.usuario_id) { %>
-		<p class="product-detail-description">
-			<a href="/product/<%= joyas.id %>/edit">Editar</a>
-		</p>
-	<% } %>
-			
+				<p class="product-detail-description">
+				<a href="/product/<%= joyas.id %>/edit">Editar</a>
+			</p>
 		</div>
 		<div class="product-detail">
 			<div class="row">
@@ -38,9 +35,7 @@
 						Subido por: <a href="/profile/id/<%=joyas.usuario.id %>"> <%= joyas.usuario.nombre %></a> 
 					</p>
 
-					<!-- <form action="/product/<%= joyas.id %>/delete" method="POST">
-					<input class="btn btn-danger" type="submit" value="Borrar">
-					</form> --> 
+		
 					
 					<% if (locals.user && user.id == joyas.usuario_id) { %>
 						<form action="/product/id/<%= joyas.id %>/delete" method="POST">
