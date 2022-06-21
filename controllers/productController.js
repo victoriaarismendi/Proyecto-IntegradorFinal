@@ -42,7 +42,8 @@ const productController = {
                 include: {
                     all: true,
                     nested: true
-                }
+                },
+                order: [['comentarios', 'id', 'DESC']],
             })
             .then(function (joyas) {
                 res.render('product', {

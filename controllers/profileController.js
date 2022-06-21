@@ -4,7 +4,7 @@ var multer = require('multer');
 const upload = multer({
     dest: 'public/images/upload'
 })
-var bcrypt = require('bcryptjs');
+var hasher = require('bcryptjs');
 
 
 const profileController = {
