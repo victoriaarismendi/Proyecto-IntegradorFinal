@@ -144,7 +144,7 @@ const productController = {
         
         db.Comentario.create(req.body)
             .then(function () {
-                res.redirect(req.params.id)
+                res.redirect("/product/id/" + req.params.id)
             })
             .catch(function (error) {
                 res.send(error);
