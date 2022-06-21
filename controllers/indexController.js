@@ -92,7 +92,9 @@ const indexController = {
                 contrasena: hashedPassword,
                 email: req.body.email,
                 fechaDeNacimiento: req.body.fechaDeNacimiento,
-                fotoDePerfil: req.body.fotoDePerfil
+                fotoDePerfil: req.body.fotoDePerfil,
+                
+
             })
             .then(function () {
                 res.redirect('/login');
