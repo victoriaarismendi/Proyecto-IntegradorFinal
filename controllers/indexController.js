@@ -1,8 +1,6 @@
-//var joyas = require('../db/data');
 var db = require('../database/models');
 var op = db.Sequelize.Op;
 var hasher = require('bcryptjs');
-const data = require('../db/data');
 
 
 const indexController = {

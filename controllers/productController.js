@@ -1,4 +1,3 @@
-//var joyas = require ('../db/data');
 var db = require('../database/models');
 var multer = require('multer');
 const upload = multer({

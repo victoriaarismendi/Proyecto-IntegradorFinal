@@ -1,5 +1,4 @@
 const db = require('../database/models');
-var joyas = require('../db/data');
 var multer = require('multer');
 const upload = multer({
     dest: 'public/images/upload'
