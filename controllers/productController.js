@@ -14,7 +14,7 @@ const productController = {
                     nested: false
                 }, //con esto le digo que me traiga todas las relaciones 
                 order: [
-                    ['id', 'DESC']
+                    ['createdAt', 'DESC']
                 ],
 
             }) //aca le digo al modelo que me traiga todo lo que encuentre
