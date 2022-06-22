@@ -77,11 +77,19 @@ const productController = {
             })
     },
 
-    delete: function (req, res) {
-        if (!req.session.user) {
-            throw Error('Not authorized.')
-        }
-        db.Joya.destroy({
+    delete: async function (req, res) {
+        try{
+            const producto = await db.Joya.findByPk(req.params.id)
+            if(producto.usuario_id != req.session.user.id){
+                throw Error ('No has subido este producto')}
+    
+            if(!req.session.user){
+                throw Error('Not authorized')}
+            } catch (err){
+                return res.send(err.message);
+            }
+
+            db.Joya.destroy({
                 where: {
                     id: req.params.id
                 }
@@ -92,7 +100,10 @@ const productController = {
             .catch(function (error) {
                 res.send(error);
             })
-    },
+        },
+    
+        
+        
 
     edit: function (req, res) {
         if (!req.session.user) {
