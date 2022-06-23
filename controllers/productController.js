@@ -123,6 +123,8 @@ const productController = {
     update: function (req, res) {
 
         if (req.file) req.body.imagen = (req.file.path).replace('public', '');
+        
+        
         db.Joya.update(req.body, {
                 where: {
                     id: req.params.id

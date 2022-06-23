@@ -84,12 +84,17 @@ const profileController = {
         if (req.file) usuario.fotoDePerfil = req.body.imagen
         if (req.body.contrasena) usuario.contrasena = hasher.hashSync(req.body.contrasena, 10);
         if (req.body.fechaDeNacimiento) usuario.fechaDeNacimiento = req.body.fechaDeNacimiento;
+
+       
         db.User.update(usuario, {
                 where: {
                     id: req.params.id
                 }
             })
             .then(function () {
+                if (req.body.nombre) {
+                    req.session.user.nombre = req.body.nombre;
+}
                 res.redirect('/profile/id/' + req.params.id);
             })
             .catch(function (error) {
