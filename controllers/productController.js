@@ -150,8 +150,7 @@ const productController = {
         if(req.session.user){
         req.body.usuario_id = req.session.user.id;
         req.body.producto_id = req.params.id;
-        req.body.createdAt = new Date();
-        req.body.updatedAt = new Date();
+        
 
         
         
